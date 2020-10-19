@@ -1,0 +1,18 @@
+$black: #484848;
+$blue: #1fc0fc;
+$yellow: #ffc341;
+$yellow-gradient: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+$yellow-gradient-hover: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+$yellow-gradient-active: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+
+$montserrat: "Montserrat", "Arial", sans-serif;
+$firasans: "Fira Sans", "Arial", sans-serif;
+$raleway: "Raleway", "Arial", sans-serif;
+
+$desktop-width-max: 1366px;
+$desktop-width: 1024px;
+$tablet-width: 1023px;
+$mobile-width: 767px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 2dppx;

@@ -1,0 +1,112 @@
+@mixin text($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin pseudo($display: block, $position: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin h2 {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: -2%;
+}
+
+@mixin h2-mobile {
+  @include h2;
+
+  font-size: 32px;
+}
+
+@mixin h3 {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -2%;
+}
+
+@mixin h3-mobile {
+  @include h3;
+
+  font-size: 24px;
+}
+
+@mixin h4 {
+  font-family: $raleway;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1.17;
+}
+
+@mixin h4 {
+  @include h4;
+
+  font-size: 18px;
+}
+
+
+@mixin text-promo {
+  font-family: $firasans;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+@mixin text-promo-mobile {
+  font-family: $firasans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text-big {
+  font-family: $firasans;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 28.9px;
+}
+
+@mixin text-big-less-lh {
+  @include text-big;
+
+  line-height: 25.5px;
+}
+
+@mixin text-regular {
+  font-family: $firasans;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25.5px;
+}
+
+@mixin text-regular-less-lh {
+  @include text-regular;
+
+  line-height: 21px;
+}
+
+@mixin text-small {
+  font-family: $firasans;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19.5px;
+}
+
+@mixin text-form {
+  font-family: $firasans;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20.4px;
+}
