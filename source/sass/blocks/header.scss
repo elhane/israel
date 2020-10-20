@@ -5,8 +5,8 @@
   right: 0;
   margin: 0 auto;
   padding-top: 33px;
-  max-width: 1142px;
-  width: 84%;
+  max-width: 1210px;
+  width: 88%;
 
   @include text(15px, 18px);
   font-weight: 500;
@@ -19,6 +19,10 @@
   flex-wrap: wrap;
 
   @include list-reset;
+}
+
+.header__list-item {
+  margin: 0 29px;
 }
 
 .header__link {
@@ -76,16 +80,18 @@
 
     width: 100%;
     justify-content: flex-end;
-    padding-left: 136px;
-    padding-top: 20px;
-    padding-right: 7px;
+    padding: 0;
 
     @include text(14px, 17px);
     text-align: right;
   }
 
   .header__list {
+    position: relative;
     justify-content: flex-end;
+    width: 100%;
+    padding: 20px 7px 0 146px;
+    margin-left: auto;
   }
 
   .header__logo {
@@ -99,10 +105,13 @@
   }
 
   .header__list-item {
-    width: 100%;
-    margin-bottom: 9px;
+    margin: 0 0 9px 0;
+    padding-left: 20px;
 
     &--logo {
+      position: absolute;
+      left: 0;
+      top: 0;
       margin-bottom: 0;
     }
   }
