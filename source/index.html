@@ -4,10 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Стажировки в Израиле</title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/preview/1366.png");
+    }
+
+    @media (max-width: 767px) {
+      html {
+        background-image: url("img/preview/320.png");
+      }
+    }
+  </style>
+  <link href="https://yoksel.github.io/pixel-glass-js/styles.css" rel="stylesheet">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+  <!--  Pixel Glass -->
+
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="header container">
+    <ul class="header__list">
+      <li class="header__list-item">
+        <a class="header__link header__link--phone" href="tel:97226216581" aria-label="Номер телефона">+ (972) 2 – 621 – 6581</a>
+      </li>
+      <li class="header__list-item header__list-item--logo">
+        <a class="header__logo" href="">
+          <img src="img/logo@1x.png" width="137" height="48"
+          srcset="img/logo@1x.png 1x, img/logo@2x.png 2x" alt="логотип проекта Маса">
+        </a>
+      </li>
+      <li class="header__list-item">
+        <a class="header__link header__link--call" href="">заказать звонок</a>
+      </li>
+
+    </ul>
+  </header>
+
+  <section class="intro">
+    <h1 class="visually-hidden">Проект "Маса": Cтажировки в Израиле</h1>
+
+    <div class="intro__wrapper">
+      <p>Учёба, путешествие и карьера для&#160;еврейской молодёжи</p>
+      <button class="intro__scroll-btn" type="button" href="" aria-label="скролл вниз">
+        <svg class="intro__scroll-svg" width="76" height="131">
+          <use xlink:href="#icon-scroll"></use>
+        </svg>
+      </button>
+    </div>
+
+
+  </section>
+
 </body>
 </html>

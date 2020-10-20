@@ -1,0 +1,89 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  // padding-bottom: 147px;
+
+  margin: 0 auto;
+  min-height: 906px;
+  // max-width: 1600px;
+
+  background-image: url("../img/intro-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: #dec5a6;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro-bg-desktop@2x.jpg");
+  }
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 516px;
+}
+
+.intro__wrapper p {
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 32px;
+  // padding-left: 18px;
+
+  @include text-promo;
+  text-align: center;
+  color: $white;
+}
+
+.intro__scroll-btn {
+  position: relative;
+  width: 76px;
+  height: 131px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/mouse.png");
+  background-repeat: no-repeat;
+  background-size: 17px 26px;
+  background-position: center 26px;
+  outline: 0;
+}
+
+.intro__scroll-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 131px;
+  fill: $white;
+}
+
+.intro__scroll-btn:hover .intro__scroll-svg,
+.intro__scroll-btn:focus .intro__scroll-svg {
+  fill: $yellow;
+}
+
+@media (max-width: $mobile-width) {
+  .intro {
+    min-height: 600px;
+    margin-top: 34px;
+
+    background-image: url("../img/intro-bg-mobile@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-bg-mobile@2x.jpg");
+    }
+  }
+
+  .intro__wrapper {
+    margin-top: 281px;
+  }
+
+  .intro__wrapper p {
+    @include text-promo-mobile;
+  }
+}
