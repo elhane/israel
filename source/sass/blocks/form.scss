@@ -1,0 +1,178 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form button {
+  width: 264px;
+  min-height: 59px;
+
+  margin: 17px 0 17px 23px;
+  padding: 13px 35px 10px;
+
+  background: $yellow-gradient;
+  border: 0;
+  border-radius: 80px;
+
+  @include text-form;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: $white;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $yellow-gradient-hover;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.4);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    background: $yellow-gradient-active;
+  }
+}
+
+.form__field--text {
+  margin-bottom: 8px;
+}
+
+.form__field--text input {
+  width: 360px;
+  height: 59px;
+  padding: 0 36px;
+
+  font-weight: 500;
+  font-size: 16px;
+  color: $black;
+  border: 2px solid $gray;
+  border-radius: 80px;
+  text-transform: uppercase;
+  outline: 0;
+
+  &:focus {
+    border-color: $yellow;
+  }
+}
+
+.form__field--text input::placeholder {
+  color: rgba(72, 72, 72, 0.5);
+}
+
+.form__field--checkbox {
+  position: initial;
+  max-width: 281px;
+  padding-left: 18px;
+}
+
+.form__field--checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.form__field--checkbox label {
+  position: relative;
+  padding: 0 0 4px 24px;
+  display: block;
+
+  @include text-small;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+    left: 0;
+    top: 0;
+
+    width: 16px;
+    height: 16px;
+    border: 2px solid $yellow;
+    border-radius: 2px;
+  }
+
+  &::after {
+    @include pseudo($display: none);
+    left: 3px;
+    top: 4px;
+
+    width: 11px;
+    height: 6px;
+    border: 2px solid $yellow;
+    border-radius: 1px;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.form__field--checkbox input:checked + label::after {
+  display: block;
+}
+
+.form__field--checkbox input:disabled + label {
+  opacity: 0.3;
+}
+
+.form__field--checkbox input:focus + label::before {
+  outline: dashed 2px rgba(255, 195, 65, 0.3);
+  outline-offset: 3px;
+}
+
+
+// стили для валидации
+
+.form__field--text.form__field--error {
+  position: relative;
+
+  &::after {
+    @include pseudo($content: "Ошибка: неверный формат");
+    top: 39px;
+    right: 20px;
+
+    @include text(11px, 19px);
+    color: $red;
+  }
+}
+
+.form__field--error input {
+  border: 2px solid $red;
+}
+
+.form__field--correct input {
+  border: 2px solid rgba(72, 72, 72, 0.5);
+}
+
+.form__field--error label::before {
+  border: 2px solid $red;
+}
+
+
+@media (max-width: $mobile-width) {
+  .form__field--text input {
+    width: 288px;
+  }
+
+  .form__field--checkbox {
+    padding-left: 7px;
+  }
+
+  .form__field--checkbox label {
+    padding-left: 25px;
+    text-align: left;
+  }
+
+  .form button {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}

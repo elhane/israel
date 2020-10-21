@@ -20,7 +20,7 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 1.22;
-  letter-spacing: -2%;
+  letter-spacing: -0.6px;
 }
 
 @mixin h2-mobile {
@@ -34,7 +34,7 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
-  letter-spacing: -2%;
+  letter-spacing: -0.6px;
 }
 
 @mixin h3-mobile {
@@ -88,6 +88,12 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 25.5px;
+}
+
+@mixin text-regular-mobile {
+  @include text-regular;
+  font-size: 14px;
+  line-height: 22.4px;
 }
 
 @mixin text-regular-less-lh {

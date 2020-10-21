@@ -1,0 +1,30 @@
+.button {
+  width: 264px;
+  min-height: 59px;
+
+  margin: 17px 0 17px 23px;
+  padding: 13px 35px 10px;
+
+  background: $yellow-gradient;
+  border: 0;
+  border-radius: 80px;
+
+  @include text-form;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: $white;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $yellow-gradient-hover;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.4);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    background: $yellow-gradient-active;
+  }
+}

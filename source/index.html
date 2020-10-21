@@ -64,5 +64,45 @@
 
   </section>
 
+
+
+  <div class="modal-overlay modal-overlay--call modal-overlay--closed">
+    <div class="modal-call">
+      <h3>Заказать звонок</h3>
+      <p>Оставьте ваши контактные данные, мы&#160;свяжемся с&#160;вами в течение рабочего дня и обязательно поможем найти&#160;ответ на&#160;ваш вопрос! </p>
+      <form class="modal-call__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <div class="form__field form__field--text">
+          <input type="text" name="user-name" id="user-name" placeholder="имя" pattern="^[А-Яа-яЁё\s]+$" required>
+          <label class="visually-hidden" for="user-name">Имя</label>
+        </div>
+
+        <div class="form__field form__field--text form__field--phone">
+          <input type="tel" name="user-phone" id="user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required>
+          <label class="visually-hidden" for="user-phone">Номер телефона</label>
+        </div>
+
+        <button type="submit">перезвоните мне</button>
+
+        <div class="form__field form__field--checkbox">
+          <input type="checkbox" name="user-agree" id="user-agree" checked required>
+          <label for="user-agree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </div>
+      </form>
+
+      <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+  </div>
+
+  <div class="modal-overlay modal-overlay--call-accepted modal-overlay--closed">
+    <div class="modal-call modal-call--accepted">
+      <h3>Заявка принята</h3>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+
+      <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal-call__btn modal-call__btn--accepted modal-overlay__btn button" type="button">Понятно</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
