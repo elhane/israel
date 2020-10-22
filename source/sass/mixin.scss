@@ -72,10 +72,16 @@
 
 @mixin text-big {
   font-family: $firasans;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 17px;
   line-height: 28.9px;
 }
+
+@mixin text-big-mobile {
+  @include text-big;
+  @include text(16px, 26.6px);
+}
+
 
 @mixin text-big-less-lh {
   @include text-big;
