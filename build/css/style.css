@@ -390,7 +390,7 @@ img {
   overflow: hidden; }
 
 .container {
-  max-width: 1366px;
+  max-width: 1171px;
   padding: 0 15px;
   margin: 0 auto; }
   @media (max-width: 767px) {
@@ -429,7 +429,6 @@ img {
   right: 0;
   margin: 0 auto;
   padding-top: 33px;
-  max-width: 1210px;
   width: 88%;
   font-size: 15px;
   line-height: 18px;
@@ -894,6 +893,7 @@ img {
     margin-top: 15px; } }
 
 .description {
+  padding-bottom: 100px;
   background-image: url("../img/program-bg@1x.jpg");
   background-position: right top 153px;
   background-size: contain;
@@ -924,7 +924,7 @@ img {
   text-align: center; }
 
 .description__video-wrapper {
-  max-width: 1366px;
+  max-width: 1171px;
   max-height: 460px;
   margin: 49px auto 0; }
 
@@ -990,6 +990,7 @@ img {
 
 @media (max-width: 767px) {
   .description {
+    padding-bottom: 0;
     background-image: url("../img/program-bg-mobile@1x.jpg");
     background-position: right -48px top 197px;
     background-size: 129%; } }
@@ -1048,3 +1049,219 @@ img {
   .description__video-btn-svg {
     width: 12.5px;
     height: 15.83px; } }
+
+.programs {
+  padding-top: 68px;
+  padding-bottom: 100px;
+  background-image: url("../img/sketch-bg@1x.png");
+  background-repeat: no-repeat;
+  background-position: right top 53px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .programs {
+      background-image: url("../img/sketch-bg@2x.png");
+      background-size: 680px auto; } }
+
+.programs h2 {
+  margin-left: 98px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+  color: #1fc0fc; }
+
+.programs__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 900px;
+  margin-left: 47px;
+  margin-right: 47px;
+  padding-top: 33px;
+  padding-left: 50px; }
+
+.programs-content {
+  padding-left: 65px; }
+
+.programs-content h3 {
+  margin-top: 18px;
+  margin-bottom: 25px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  color: #1fc0fc; }
+
+.programs-content p {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25.5px;
+  line-height: 26.6px; }
+
+.programs__tab {
+  display: none; }
+  .programs__tab--active {
+    display: block; }
+
+@media (max-width: 767px) {
+  .programs {
+    padding-bottom: 80px;
+    background-size: contain;
+    background-position: right -23px top 200px; }
+  .programs h2 {
+    margin-left: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: -0.6px;
+    font-size: 32px;
+    text-align: center; }
+  .programs__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    margin: 0; }
+  .programs-content {
+    padding-left: 0; }
+  .programs-content h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    font-size: 24px; }
+  .programs-content p {
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25.5px;
+    font-size: 14px;
+    line-height: 22.4px;
+    line-height: 22.6px; } }
+
+.program {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 18px;
+  outline: 0; }
+
+.program__item {
+  margin-bottom: 4px;
+  outline: 0; }
+
+.program__link {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 228px;
+  min-height: 68px;
+  padding-left: 73px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  cursor: pointer; }
+  .program__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/sprite-png@1x.png"); }
+  .program__link--common::before {
+    background-position: -7px 87px; }
+  .program__link--academic::before {
+    background-position: -56px 87px; }
+  .program__link--internship::before {
+    background-position: -105px 81px; }
+  .program__link--volunteerism::before {
+    background-position: -153px 84px; }
+  .program__link--religious::before {
+    background-position: -197px 82px; }
+  .program__link:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.5);
+    outline-offset: 3px; }
+
+.program__item:hover .program__link {
+  color: #ffc341; }
+  .program__item:hover .program__link--common::before, .program__item:hover .program__link--academic::before {
+    background-position-y: 179px; }
+  .program__item:hover .program__link--internship::before, .program__item:hover .program__link--religious::before {
+    background-position-y: 174px; }
+  .program__item:hover .program__link--volunteerism::before {
+    background-position-y: 176px; }
+
+.program__item--active .program__link,
+.program__item--active:hover .program__link,
+.program__item:active .program__link {
+  padding-top: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  background-image: url("../img/svg/gradient-arrow.svg"); }
+  .program__item--active .program__link--common::before, .program__item--active .program__link--academic::before,
+  .program__item--active:hover .program__link--common::before,
+  .program__item--active:hover .program__link--academic::before,
+  .program__item:active .program__link--common::before,
+  .program__item:active .program__link--academic::before {
+    background-position-y: 130px; }
+  .program__item--active .program__link--internship::before, .program__item--active .program__link--religious::before,
+  .program__item--active:hover .program__link--internship::before,
+  .program__item--active:hover .program__link--religious::before,
+  .program__item:active .program__link--internship::before,
+  .program__item:active .program__link--religious::before {
+    background-position-y: 125px; }
+  .program__item--active .program__link--volunteerism::before,
+  .program__item--active:hover .program__link--volunteerism::before,
+  .program__item:active .program__link--volunteerism::before {
+    background-position-y: 127px; }
+
+@media (max-width: 767px) {
+  .program {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 48px;
+    margin-right: -16px;
+    margin-left: -61px;
+    overflow-x: hidden; }
+  .program__item {
+    margin-bottom: 0; }
+  .program__link {
+    width: unset;
+    opacity: 0.4;
+    min-height: 48px;
+    padding-left: 52px;
+    padding-right: 15px; }
+    .program__link::before {
+      top: 7px;
+      left: 12px;
+      width: 36px;
+      height: 33px; }
+  .program__item--active .program__link,
+  .program__item:active .program__link {
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    border-radius: 60px;
+    opacity: 1; } }

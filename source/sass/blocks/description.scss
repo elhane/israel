@@ -1,4 +1,5 @@
 .description {
+  padding-bottom: 100px;
   background-image: url("../img/program-bg@1x.jpg");
   background-position: right top 153px;
   background-size: contain;
@@ -103,10 +104,9 @@
   background-color: $white-active;
 }
 
-
-
 @media (max-width: $mobile-width) {
   .description {
+    padding-bottom: 0;
     background-image: url("../img/program-bg-mobile@1x.jpg");
     background-position: right -48px top 197px;
     background-size: 129%;

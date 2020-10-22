@@ -1,0 +1,141 @@
+.program {
+  @include list-reset;
+  @include text(15px, 18px);
+  outline: 0;
+}
+
+.program__item {
+  margin-bottom: 4px;
+  outline: 0;
+}
+
+.program__link {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 228px;
+  min-height: 68px;
+  padding-left: 73px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  // outline: 0;
+  cursor: pointer;
+
+  &::before {
+    @include pseudo;
+    left: 20px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/sprite-png@1x.png");
+  }
+
+  &--common::before {
+    background-position: -7px 87px;
+  }
+
+  &--academic::before {
+    background-position: -56px 87px;
+  }
+
+  &--internship::before {
+    background-position: -105px 81px;
+  }
+
+  &--volunteerism::before {
+    background-position: -153px 84px;
+  }
+
+  &--religious::before {
+    background-position: -197px 82px;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.5);
+    outline-offset: 3px;
+  }
+}
+
+.program__item:hover .program__link {
+  color: $yellow;
+
+  &--common::before,
+  &--academic::before {
+    background-position-y: 179px;
+  }
+
+  &--internship::before,
+  &--religious::before {
+    background-position-y: 174px;
+  }
+
+  &--volunteerism::before {
+    background-position-y: 176px;
+  }
+}
+
+.program__item--active .program__link,
+.program__item--active:hover .program__link,
+.program__item:active .program__link {
+  padding-top: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: $white;
+  background-image: url("../img/svg/gradient-arrow.svg");
+
+  &--common::before,
+  &--academic::before {
+    background-position-y: 130px;
+  }
+
+  &--internship::before,
+  &--religious::before {
+    background-position-y: 125px;
+  }
+
+  &--volunteerism::before {
+    background-position-y: 127px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .program {
+    display: flex;
+    min-height: 48px;
+    // height: 48px;
+    margin-right: -16px;
+    margin-left: -61px;
+    overflow-x: hidden;
+  }
+
+  .program__item {
+    margin-bottom: 0;
+    // margin-right: 7px;
+  }
+
+  .program__link {
+    width: unset;
+    opacity: 0.4;
+    min-height: 48px;
+    padding-left: 52px;
+    padding-right: 15px;
+
+    &::before {
+      top: 7px;
+      left: 12px;
+      width: 36px;
+      height: 33px;
+    }
+  }
+
+  .program__item--active .program__link,
+  .program__item:active .program__link {
+    background: $yellow-gradient;
+    border-radius: 60px;
+    opacity: 1;
+  }
+}

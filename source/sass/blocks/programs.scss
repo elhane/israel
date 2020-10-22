@@ -1,0 +1,96 @@
+.programs {
+  padding-top: 68px;
+  padding-bottom: 100px;
+  background-image: url("../img/sketch-bg@1x.png");
+  background-repeat: no-repeat;
+  background-position: right top 53px;
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/sketch-bg@2x.png");
+    background-size: 680px auto;
+  }
+}
+
+.programs h2 {
+  margin-left: 98px;
+
+  @include h2;
+  text-transform: uppercase;
+  color: $blue;
+}
+
+.programs__wrapper {
+  display: flex;
+  max-width: 900px;
+  margin-left: 47px;
+  margin-right: 47px;
+  padding-top: 33px;
+  padding-left: 50px;
+}
+
+.programs-content {
+  padding-left: 65px;
+}
+
+.programs-content h3 {
+  margin-top: 18px;
+  margin-bottom: 25px;
+
+  @include h3;
+  color: $blue;
+}
+
+.programs-content p {
+  @include text-regular;
+  line-height: 26.6px;
+}
+
+// ТАБЫ
+.programs__tab {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .programs {
+    padding-bottom: 80px;
+    // background-size: 320px auto;
+    background-size: contain;
+    background-position: right -23px top 200px;
+  }
+
+  .programs h2 {
+    margin-left: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @include h2-mobile;
+    text-align: center;
+  }
+
+  .programs__wrapper {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .programs-content {
+    padding-left: 0;
+  }
+
+  .programs-content h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    @include h3-mobile;
+  }
+
+  .programs-content p {
+    @include text-regular-mobile;
+    line-height: 22.6px;
+  }
+}
