@@ -1,0 +1,199 @@
+.how-to-go {
+  background-image: url("../img/how-to-go-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //   background-image: url("../img/how-to-go-bg@2x.jpg");
+  //   background-size: 680px auto;
+  // }
+}
+
+@media (min-width: 1300px) {
+  .how-to-go {
+    background-position-y: -37px;
+    padding-top: 160px;
+  }
+}
+
+.how-to-go__wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.how-to-go__inner {
+  width: 48.7%;
+}
+
+.how-to-go__inner h2 {
+  margin-bottom: 26px;
+
+  @include h2;
+}
+
+.how-to-go__inner p {
+  padding-right: 28px;
+
+  @include text-regular;
+}
+
+.how-to-go__inner h3 {
+  margin-top: 33px;
+  margin-bottom: 25px;
+  padding-right: 58px;
+
+  @include text(17px, 29px);
+  font-weight: 500;
+}
+
+.how-to-go__inner span {
+  display: block;
+  margin-top: 45px;
+  padding-left: 13px;
+
+  @include text-regular;
+  line-height: 23.9px;
+  color: rgba(72, 72, 72, 0.5);
+  border-left: 4px solid transparent;
+  border-image: $yellow-gradient;
+  border-image-slice: 1;
+}
+
+.how-to-go__list {
+  position: relative;
+
+  @include list-reset;
+  counter-reset: myCounter;
+
+  &::before {
+    @include pseudo;
+    left: 3px;
+    top: 11px;
+    height: 90%;
+    width: 1px;
+    border-left: 1px dashed rgba(72, 72, 72, 0.2);
+  }
+}
+
+.how-to-go__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  max-width: 469px;
+  margin-bottom: 39px;
+  margin-left: -15px;
+  padding-left: 61px;
+
+  @include text-regular-less-lh;
+
+  &::before {
+    @include pseudo;
+    top: 0;
+    left: 0;
+
+    width: 36px;
+    height: 36px;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &::after {
+    @include pseudo($display: inline-block, $content: counter(myCounter));
+    top: 3px;
+    left: 14px;
+    counter-increment: myCounter;
+
+    @include text(17px, 29px);
+    font-weight: 700;
+    color: $yellow;
+    text-align: left;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .how-to-go {
+    padding-top: 50px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .how-to-go {
+    position: relative;
+    background-image: none;
+
+    &::after {
+      @include pseudo;
+      top: 356px;
+      right: 0;
+      width: 215px;
+      height: 199px;
+
+      background-image: url("../img/stamp@1x.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .how-to-go__inner {
+    width: 100%;
+  }
+
+  .how-to-go__inner h2 {
+    @include h2-mobile;
+    text-align: center;
+  }
+
+  .how-to-go__inner p {
+    padding-right: 0;
+
+    @include text-regular-mobile;
+  }
+
+  .how-to-go__inner h3 {
+    margin-top: 26px;
+    margin-bottom: 10px;
+    padding-right: 0;
+
+    @include text(16px, 25.6px);
+  }
+
+  .how-to-go__list {
+    margin-left: 8px;
+    margin-bottom: 20px;
+
+    &::before {
+      top: 21px;
+      height: 84%;
+    }
+  }
+
+  .how-to-go__list-item {
+    padding-left: 51px;
+    margin-bottom: 20px;
+    min-height: 72px;
+    max-width: unset;
+
+    @include text-regular-mobile;
+
+    &::before {
+      top: 16px;
+    }
+
+    &::after {
+      top: 19px;
+    }
+  }
+
+  .how-to-go__inner span {
+    margin-top: 19px;
+    padding-left: 10px;
+    margin-left: -6px;
+
+    @include text-regular-mobile;
+  }
+}
