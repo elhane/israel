@@ -46,15 +46,6 @@
   line-height: 26.6px;
 }
 
-// ТАБЫ
-.programs__tab {
-  display: none;
-
-  &--active {
-    display: block;
-  }
-}
-
 @media (max-width: $mobile-width) {
   .programs {
     padding-bottom: 80px;
@@ -92,5 +83,14 @@
   .programs-content p {
     @include text-regular-mobile;
     line-height: 22.6px;
+  }
+}
+
+// ТАБЫ
+.programs__tab {
+  display: none;
+
+  &--active {
+    display: block;
   }
 }

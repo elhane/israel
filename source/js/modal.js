@@ -17,16 +17,9 @@
   var phoneInput = callPopup.querySelector('[name=user-phone]');
   var userAgreeInput = callPopup.querySelector('[name=user-agree]');
 
-  var isStorageSupport = true;
-  var storageName = '';
-  var storagePhone = '';
-
-  try {
-    storageName = localStorage.getItem('nameInput');
-    storagePhone = localStorage.getItem('phoneInput');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+  // var isStorageSupport = true;
+  var storageName = localStorage.getItem('nameInput');
+  var storagePhone = localStorage.getItem('phoneInput');
 
   function openPopup(item, evt) {
     if (item.classList.contains('modal-overlay--closed')) {

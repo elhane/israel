@@ -20,7 +20,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 15px;
-  // outline: 0;
   cursor: pointer;
 
   &::before {
@@ -85,7 +84,9 @@
   font-weight: 500;
   letter-spacing: 0.2px;
   color: $white;
-  background-image: url("../img/svg/gradient-arrow.svg");
+  // background-image: url("../img/svg/gradient-arrow.svg");
+  background: $yellow-gradient;
+  clip-path: polygon(0 0, 87% 0%, 100% 51%, 87% 100%, 0 99%);
 
   &--common::before,
   &--academic::before {
@@ -123,6 +124,7 @@
     min-height: 48px;
     padding-left: 52px;
     padding-right: 15px;
+    clip-path: none;
 
     &::before {
       top: 7px;
@@ -130,10 +132,17 @@
       width: 36px;
       height: 33px;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .program__item--active .program__link,
+  .program__item--active:hover .program__link,
   .program__item:active .program__link {
+
+    clip-path: none;
     background: $yellow-gradient;
     border-radius: 60px;
     opacity: 1;
