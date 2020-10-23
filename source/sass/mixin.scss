@@ -21,11 +21,12 @@
   font-size: 40px;
   line-height: 1.22;
   letter-spacing: -0.6px;
+  color: $blue;
+  text-transform: uppercase;
 }
 
 @mixin h2-mobile {
   @include h2;
-
   font-size: 32px;
 }
 

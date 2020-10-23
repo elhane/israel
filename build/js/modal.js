@@ -4,29 +4,19 @@
   var callBtn = document.querySelector('.header__link--call');
   var callPopup = document.querySelector('.modal-overlay--call');
   var callPopupSubmitBtn = callPopup.querySelector('button[type=submit]');
+  var wantToGoForm = document.querySelector('.want-to-go__form');
+  var wantToGoFormBtn = wantToGoForm.querySelector('button[type=submit]');
   var callPopupCloseBtn = callPopup.querySelector('.modal-call__btn-close');
-
   var callAcceptedPopup = document.querySelector('.modal-overlay--call-accepted');
   var callAcceptedPopupCloseBtn = callAcceptedPopup.querySelector('.modal-call__btn-close');
   var callAcceptedBtn = callAcceptedPopup.querySelector('.modal-call__btn--accepted');
-
   var callForm = callPopup.querySelector('form');
   var callFormInputs = callForm.querySelectorAll('input');
   var nameInput = callPopup.querySelector('[name=user-name]');
-
   var phoneInput = callPopup.querySelector('[name=user-phone]');
   var userAgreeInput = callPopup.querySelector('[name=user-agree]');
-
-  var isStorageSupport = true;
-  var storageName = '';
-  var storagePhone = '';
-
-  try {
-    storageName = localStorage.getItem('nameInput');
-    storagePhone = localStorage.getItem('phoneInput');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+  var storageName = localStorage.getItem('nameInput');
+  var storagePhone = localStorage.getItem('phoneInput');
 
   function openPopup(item, evt) {
     if (item.classList.contains('modal-overlay--closed')) {
@@ -88,6 +78,11 @@
     closePopup(callPopup);
   }
 
+  // открытие попапа по клику на кнопку перезвоните мне
+  function onWantToGoFormBtnClick(evt) {
+    openPopup(callAcceptedPopup, evt);
+  }
+
   // закрытие попапа по клику на крестик попапа заявка принята
   function onCallAcceptedPopupCloseBtnClick() {
     closePopup(callPopup);
@@ -124,6 +119,9 @@
   // клик по крестику попапа заказать звонок
   callPopupCloseBtn.addEventListener('click', onCallPopupCloseBtnClick);
 
+  // клик по кнопке перезвоните мне
+  wantToGoFormBtn.addEventListener('click', onWantToGoFormBtnClick);
+
   // клик по крестику попапа заявка принята
   callAcceptedPopupCloseBtn.addEventListener('click', onCallAcceptedPopupCloseBtnClick);
 
@@ -133,6 +131,7 @@
   // клик по кнопке понятно
   callAcceptedBtn.addEventListener('click', onCallAcceptedBtnBtnClick);
 
+  // закрытие по ESC и клику на оверлей
   window.addEventListener('keydown', onEscPress);
   window.addEventListener('click', overlayClickHandler);
 

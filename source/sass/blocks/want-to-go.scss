@@ -1,0 +1,80 @@
+.want-to-go {
+  min-height: 590px;
+  padding-top: 175px;
+  padding-bottom: 300px;
+
+  background-image: url("../img/girl-flag-bg-desktop@1x.jpg");
+  background-size: 818px auto;
+  background-repeat: no-repeat;
+  background-position: right bottom 110px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-flag-bg-desktop@2x.jpg");
+  }
+}
+
+.want-to-go h2 {
+  margin-left: 97px;
+  margin-bottom: 25px;
+
+  @include h2;
+}
+
+.want-to-go p {
+  margin-left: 97px;
+  max-width: 400px;
+
+  @include text-big;
+}
+
+@media (min-width: 1290px) {
+  .want-to-go {
+    background-position: right top;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .want-to-go {
+    background-position: right -154px bottom 42px;
+  }
+
+  .want-to-go__form,
+  .want-to-go h2,
+  .want-to-go p {
+    margin-left: 47px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .want-to-go {
+    padding-top: 0;
+    padding-bottom: 96%;
+    background-position: center bottom;
+    background-image: url("../img/girl-flag-bg-mobile@1x.jpg");
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-flag-bg-mobile@2x.jpg");
+    }
+  }
+
+  .want-to-go__form {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .want-to-go h2 {
+    margin-left: 0;
+    text-align: center;
+
+    @include h2-mobile;
+  }
+
+  .want-to-go p {
+    margin-left: 0;
+    max-width: unset;
+
+    @include text-big-mobile;
+  }
+}
+

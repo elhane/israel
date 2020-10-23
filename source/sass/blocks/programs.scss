@@ -1,6 +1,6 @@
 .programs {
   padding-top: 68px;
-  padding-bottom: 100px;
+  padding-bottom: 14px;
   background-image: url("../img/sketch-bg@1x.png");
   background-repeat: no-repeat;
   background-position: right top 53px;
@@ -16,8 +16,7 @@
   margin-left: 98px;
 
   @include h2;
-  text-transform: uppercase;
-  color: $blue;
+  // color: $blue;
 }
 
 .programs__wrapper {
@@ -46,9 +45,19 @@
   line-height: 26.6px;
 }
 
+@media (max-width: $tablet-width) {
+  .programs__wrapper {
+    padding-left: 0;
+  }
+
+  .programs h2 {
+    margin-left: 48px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .programs {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     // background-size: 320px auto;
     background-size: contain;
     background-position: right -23px top 200px;
@@ -94,3 +103,4 @@
     display: block;
   }
 }
+

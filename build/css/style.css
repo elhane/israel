@@ -740,6 +740,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .form--want-to-go {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 98px;
+    margin-top: 64px; }
 
 .form button {
   width: 264px;
@@ -765,6 +772,12 @@ img {
   .form button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
 
+.form--want-to-go button {
+  margin: 0;
+  margin-left: -101px;
+  width: auto;
+  min-width: 216px; }
+
 .form__field--text {
   margin-bottom: 8px; }
 
@@ -781,6 +794,9 @@ img {
   outline: 0; }
   .form__field--text input:focus {
     border-color: #ffc341; }
+
+.form__field--want-to-go {
+  margin: 0; }
 
 .form__field--text input::-webkit-input-placeholder {
   color: rgba(72, 72, 72, 0.5); }
@@ -881,8 +897,18 @@ img {
   border: 2px solid #ff0000; }
 
 @media (max-width: 767px) {
+  .form--want-to-go {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    margin-top: 23px; }
   .form__field--text input {
-    width: 288px; }
+    width: 288px;
+    padding: 5px 36px 1px 38px;
+    font-size: 16px;
+    letter-spacing: -0.3px; }
   .form__field--checkbox {
     padding-left: 7px; }
   .form__field--checkbox label {
@@ -890,7 +916,14 @@ img {
     text-align: left; }
   .form button {
     margin-left: 0;
-    margin-top: 15px; } }
+    margin-top: 15px; }
+  .form--want-to-go button {
+    margin-top: 10px;
+    min-width: 264px;
+    width: 90%; }
+  .form__field--want-to-go,
+  .form__field--want-to-go input {
+    width: 100%; } }
 
 .description {
   padding-bottom: 100px;
@@ -911,8 +944,8 @@ img {
   line-height: 1.22;
   letter-spacing: -0.6px;
   color: #1fc0fc;
-  text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
 
 .description p {
   max-width: 720px;
@@ -1005,6 +1038,8 @@ img {
     font-size: 40px;
     line-height: 1.22;
     letter-spacing: -0.6px;
+    color: #1fc0fc;
+    text-transform: uppercase;
     font-size: 32px;
     margin-bottom: 22px; }
   .description p {
@@ -1052,7 +1087,7 @@ img {
 
 .programs {
   padding-top: 68px;
-  padding-bottom: 100px;
+  padding-bottom: 14px;
   background-image: url("../img/sketch-bg@1x.png");
   background-repeat: no-repeat;
   background-position: right top 53px; }
@@ -1068,8 +1103,8 @@ img {
   font-size: 40px;
   line-height: 1.22;
   letter-spacing: -0.6px;
-  text-transform: uppercase;
-  color: #1fc0fc; }
+  color: #1fc0fc;
+  text-transform: uppercase; }
 
 .programs__wrapper {
   display: -webkit-box;
@@ -1101,9 +1136,15 @@ img {
   line-height: 25.5px;
   line-height: 26.6px; }
 
+@media (max-width: 1023px) {
+  .programs__wrapper {
+    padding-left: 0; }
+  .programs h2 {
+    margin-left: 48px; } }
+
 @media (max-width: 767px) {
   .programs {
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     background-size: contain;
     background-position: right -23px top 200px; }
   .programs h2 {
@@ -1115,6 +1156,8 @@ img {
     font-size: 40px;
     line-height: 1.22;
     letter-spacing: -0.6px;
+    color: #1fc0fc;
+    text-transform: uppercase;
     font-size: 32px;
     text-align: center; }
   .programs__wrapper {
@@ -1274,3 +1317,82 @@ img {
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     border-radius: 60px;
     opacity: 1; } }
+
+.want-to-go {
+  min-height: 590px;
+  padding-top: 175px;
+  padding-bottom: 300px;
+  background-image: url("../img/girl-flag-bg-desktop@1x.jpg");
+  background-size: 818px auto;
+  background-repeat: no-repeat;
+  background-position: right bottom 110px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .want-to-go {
+      background-image: url("../img/girl-flag-bg-desktop@2x.jpg"); } }
+
+.want-to-go h2 {
+  margin-left: 97px;
+  margin-bottom: 25px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: -0.6px;
+  color: #1fc0fc;
+  text-transform: uppercase; }
+
+.want-to-go p {
+  margin-left: 97px;
+  max-width: 400px;
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28.9px; }
+
+@media (min-width: 1290px) {
+  .want-to-go {
+    background-position: right top; } }
+
+@media (max-width: 1023px) {
+  .want-to-go {
+    background-position: right -154px bottom 42px; }
+  .want-to-go__form,
+  .want-to-go h2,
+  .want-to-go p {
+    margin-left: 47px; } }
+
+@media (max-width: 767px) {
+  .want-to-go {
+    padding-top: 0;
+    padding-bottom: 96%;
+    background-position: center bottom;
+    background-image: url("../img/girl-flag-bg-mobile@1x.jpg");
+    background-size: contain; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+    .want-to-go {
+      background-image: url("../img/girl-flag-bg-mobile@2x.jpg"); } }
+
+@media (max-width: 767px) {
+  .want-to-go__form {
+    margin-left: 0;
+    width: 100%; }
+  .want-to-go h2 {
+    margin-left: 0;
+    text-align: center;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: -0.6px;
+    color: #1fc0fc;
+    text-transform: uppercase;
+    font-size: 32px; }
+  .want-to-go p {
+    margin-left: 0;
+    max-width: unset;
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28.9px;
+    font-size: 16px;
+    line-height: 26.6px; } }

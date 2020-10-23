@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,15 +53,15 @@
 
     <div class="intro__wrapper">
       <p>Учёба, путешествие и карьера для&#160;еврейской молодёжи</p>
-      <button class="intro__scroll-btn" type="button" aria-label="скролл вниз">
+      <a class="intro__scroll-btn" href="#description" aria-label="скролл вниз">
         <svg class="intro__scroll-svg" width="76" height="131">
           <use xlink:href="#icon-scroll"></use>
         </svg>
-      </button>
+      </a>
     </div>
   </section>
 
-  <section class="description">
+  <section class="description" id="description">
     <div class="container">
       <h2>О программе</h2>
       <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&#160;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
@@ -124,6 +124,23 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="want-to-go">
+    <div class="container">
+      <h2>Хочу поехать!</h2>
+      <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+      <form class="want-to-go__form form form--want-to-go" action="https://echo.htmlacademy.ru/courses" method="post">
+
+        <div class="form__field form__field--text form__field--want-to-go">
+          <input type="tel" name="user-phone" id="want-to-go-user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
+          <label class="visually-hidden" for="want-to-go-user-phone">Номер телефона</label>
+        </div>
+
+        <button type="submit">перезвоните мне</button>
+
+      </form>
     </div>
   </section>
 
