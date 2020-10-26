@@ -548,6 +548,15 @@ img {
     .intro {
       background-image: url("../img/intro-bg-desktop@2x.jpg"); } }
 
+@media (min-width: 1370px) {
+  .intro {
+    min-height: 1000px;
+    background-position-y: bottom; } }
+
+@media (min-width: 1900px) {
+  .intro {
+    min-height: 1200px; } }
+
 .intro__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1420,17 +1429,20 @@ img {
     line-height: 26.6px; } }
 
 .how-to-go {
-  background-image: url("../img/how-to-go-bg@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: cover;
   padding-top: 50px;
-  padding-bottom: 100px; }
+  padding-bottom: 135px;
+  background-image: url("../img/how-to-go-photo@1x.png"), url("../img/how-to-go-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: left 11px top 158px, left top -38px;
+  background-size: 43%, cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .how-to-go {
+      background-image: url("../img/how-to-go-photo@2x.png"), url("../img/how-to-go-bg@2x.jpg"); } }
 
 @media (min-width: 1300px) {
   .how-to-go {
-    background-position-y: -37px;
-    padding-top: 160px; } }
+    padding-top: 160px;
+    padding-bottom: 173px; } }
 
 .how-to-go__wrapper {
   display: -webkit-box;
@@ -1545,7 +1557,7 @@ img {
 @media (max-width: 1023px) {
   .how-to-go {
     padding-top: 50px;
-    background-size: contain; } }
+    background-size: 50%, cover; } }
 
 @media (max-width: 767px) {
   .how-to-go {
@@ -1560,7 +1572,15 @@ img {
       width: 215px;
       height: 199px;
       background-image: url("../img/stamp@1x.png");
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      background-size: contain; } }
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+      .how-to-go::after {
+        background-image: url("../img/stamp@2x.png"); } }
+
+@media (max-width: 767px) {
+  .how-to-go__wrapper {
+    background-image: none; }
   .how-to-go__inner {
     width: 100%; }
   .how-to-go__inner h2 {
@@ -1618,3 +1638,105 @@ img {
     line-height: 25.5px;
     font-size: 14px;
     line-height: 22.4px; } }
+
+.life {
+  padding-bottom: 74px;
+  min-height: 900px;
+  background-image: url("../img/life-israel-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top 61px;
+  background-size: contain; }
+
+.life h2 {
+  margin-bottom: 23px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: -0.6px;
+  color: #1fc0fc;
+  text-transform: uppercase;
+  text-align: center; }
+
+.life h4 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: 370px;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 24.7px;
+  text-align: left;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  color: #ffffff; }
+
+.life p {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 28.9px;
+  text-align: center; }
+
+.life__list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: -19px auto 0;
+  padding: 67px 0 0 40%;
+  width: 101%;
+  overflow: visible; }
+
+@media (min-width: 1100px) {
+  .life__list {
+    padding-left: 42%; } }
+
+.life__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 318px;
+  min-width: 211px;
+  height: auto;
+  padding: 10px 48px 32px 34px;
+  margin-bottom: 31px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+  .life__item--history {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    height: 100%;
+    width: 42%;
+    max-height: 732px;
+    padding-left: 40px;
+    padding-bottom: 33px;
+    background-image: url("../img/history@1x.png");
+    background-position-y: bottom; }
+  .life__item--hebrew {
+    width: 35%;
+    background-image: url("../img/hebrew-lang@1x.png"); }
+  .life__item--study {
+    padding-left: 47px;
+    width: 65%;
+    background-image: url("../img/study@1x.png");
+    letter-spacing: 0.5px; }
+  .life__item--creative {
+    padding-right: 15px;
+    padding-left: 42px;
+    width: 65%;
+    background-image: url("../img/creative@1x.png"); }
+  .life__item--leader {
+    padding-left: 37px;
+    width: 34%;
+    background-image: url("../img/leader@1x.png"); }
