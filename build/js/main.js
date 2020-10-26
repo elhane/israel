@@ -1,3 +1,4 @@
+// -------------------- модальные окна --------------------
 'use strict';
 
 (function () {
@@ -134,5 +135,126 @@
   // закрытие по ESC и клику на оверлей
   window.addEventListener('keydown', onEscPress);
   window.addEventListener('click', overlayClickHandler);
+
+})();
+
+// -------------------- табы программы --------------------
+
+(function () {
+  var programsTabs = document.querySelector('#tab-nav');
+
+  function hideActiveTabs() {
+    var activeButtons = document.querySelectorAll('.program__item--active');
+    var activeTabs = document.querySelectorAll('.programs__tab--active');
+
+    activeButtons.forEach(function (tab) {
+      tab.classList.remove('program__item--active');
+    });
+
+    activeTabs.forEach(function (tab) {
+      tab.classList.remove('programs__tab--active');
+    });
+  }
+
+  function tabClickHandler(evt) {
+    hideActiveTabs();
+    evt.target.parentElement.classList.add('program__item--active'); // выделяем выбранный пункт
+    var clickedTabAttribute = evt.target.getAttribute('data-tab-name');
+    var activeTab = document.getElementsByClassName(clickedTabAttribute)[0];
+    activeTab.classList.add('programs__tab--active'); // покзаываем содержимое таба
+  }
+
+  programsTabs.addEventListener('click', tabClickHandler);
+
+  // свайп списка табов
+  var xDown = null;
+  var yDown = null;
+
+  function touchStartHandler(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+  }
+
+  function touchMoveHandler(evt) {
+    if (!xDown || !yDown) {
+      return;
+    }
+
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      if (xDiff > 0) {
+        evt.preventDefault();
+        programsTabs.style.marginLeft = '-170%';
+        programsTabs.style.transition = '0.2s';
+
+      } else {
+        evt.preventDefault();
+        programsTabs.style.marginLeft = '-16px';
+        programsTabs.style.transition = '0.2s';
+      }
+    }
+    xDown = null;
+    yDown = null;
+  }
+
+  programsTabs.addEventListener('touchstart', touchStartHandler, false);
+  programsTabs.addEventListener('touchmove', touchMoveHandler, false);
+
+})();
+
+// -------------------- свайпер жизнь в израиле --------------------
+
+(function () {
+
+  var slider = document.querySelector('.swiper-container');
+  var breakpoint = window.matchMedia('(min-width:768px)');
+  var mySwiper;
+
+  function checkBreakpoint() {
+    if (breakpoint.matches) {
+
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
+      }
+      return;
+
+    } else if (!breakpoint.matches) {
+
+      enableSwiper();
+    }
+  }
+
+  function enableSwiper() {
+
+    if (slider) {
+      mySwiper = new window.Swiper(slider, {
+
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          600: {
+            slidesPerView: 2,
+            slidesPerGroup: 1,
+          }
+        }
+      });
+    }
+  }
+
+  breakpoint.addListener(checkBreakpoint);
+  checkBreakpoint();
 
 })();

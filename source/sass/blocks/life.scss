@@ -1,0 +1,207 @@
+.life {
+  padding-bottom: 132px;
+  background-image: url("../img/life-israel-bg@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top -44px;
+  background-size: contain;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/life-israel-bg@2x.jpg");
+  }
+}
+
+.life h2 {
+  margin-bottom: 23px;
+
+  @include h2;
+  text-align: center;
+}
+
+.life h4 {
+  align-self: flex-end;
+
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: 370px;
+
+  @include h4;
+  text-align: left;
+  letter-spacing: 0.4px;
+  color: $white;
+  font-size: 1.1em;
+}
+
+.life p {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-right: 10px;
+
+  @include text(17px, 28.9px);
+  color: rgba(72, 72, 72, 0.87);
+  text-align: center;
+}
+
+.life__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-reset;
+  margin: -19px auto 0;
+  padding: 67px 0 0 42%;
+  width: 101%;
+  overflow: visible;
+}
+
+.life__item {
+  display: flex;
+  min-height: 227px;
+  height: auto;
+  padding-right: 6.1%;
+  padding-bottom: 5.3%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+
+  &--history {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    height: 100%;
+    width: 42%;
+    max-height: 732px;
+    padding-left: 3.4%;
+    padding-bottom: 2.8%;
+    background-image: url("../img/history@1x.png");
+    background-position-y: bottom;
+  }
+
+  &--hebrew {
+    padding-left: 5%;
+    width: 35%;
+    background-image: url("../img/hebrew-lang@1x.png");
+  }
+
+  &--study {
+    padding-left: 6.9%;
+    width: 65%;
+    background-image: url("../img/study@1x.png");
+    letter-spacing: 0.5px;
+  }
+
+  &--creative {
+    padding-left: 6.2%;
+    width: 65%;
+    background-image: url("../img/creative@1x.png");
+  }
+
+  &--leader {
+    padding-left: 5.4%;
+    width: 34%;
+    background-image: url("../img/leader@1x.png");
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    &--history {
+      background-image: url("../img/history@2x.png");
+    }
+
+    &--hebrew {
+      background-image: url("../img/hebrew-lang@2x.png");
+    }
+
+    &--study {
+      background-image: url("../img/study@2x.png");
+    }
+
+    &--creative {
+      background-image: url("../img/creative@2x.png");
+    }
+
+    &--leader {
+      background-image: url("../img/leader@2x.png");
+    }
+  }
+}
+
+@media (min-width: 830px) {
+  .life__item {
+    min-height: 265px;
+  }
+}
+
+@media (min-width: 990px) {
+  .life h4 {
+    font-size: 1.25em;
+  }
+
+  .life__item {
+    min-height: 322px;
+    margin-bottom: 25px;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .life {
+    padding-top: 52px;
+    padding-bottom: 105px;
+    background-image: none;
+  }
+
+  .life h2 {
+    margin-bottom: 24px;
+
+    @include h2-mobile;
+  }
+
+  .life p {
+    padding-right: 0;
+
+    @include text(16px, 26.6px);
+
+    text-align: left;
+  }
+
+  .life h4 {
+    max-width: 256px;
+    margin: 0 auto 22px;
+
+    @include h4-mobile;
+    text-align: center;
+
+    font-size: 1.1em;
+  }
+
+
+  .life__list {
+    padding-left: 0;
+    width: max-content;
+    height: 400px;
+  }
+
+  .life__item {
+    margin: 0;
+    padding: 0;
+
+    background-position: center;
+
+    &--history {
+      position: initial;
+    }
+
+
+    &--study,
+    &--creative {
+      background-position: right bottom;
+      background-size: cover;
+    }
+  }
+
+  .life__swiper-container {
+    padding-bottom: 40px;
+    margin-top: -26px;
+  }
+}

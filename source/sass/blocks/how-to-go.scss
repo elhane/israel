@@ -129,6 +129,7 @@
 @media (max-width: $mobile-width) {
   .how-to-go {
     position: relative;
+    padding-bottom: 0;
     background-image: none;
 
     &::after {

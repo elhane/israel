@@ -41,6 +41,7 @@
   max-width: 400px;
 
   @include text-big;
+  color: rgba(72, 72, 72, 0.87);
 }
 
 @media (min-width: 1290px) {

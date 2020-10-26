@@ -48,13 +48,12 @@
   font-family: $raleway;
   font-weight: 800;
   font-size: 21px;
-  line-height: 1.17;
+  line-height: 24.7px;
 }
 
-@mixin h4 {
+@mixin h4-mobile {
   @include h4;
-
-  font-size: 18px;
+  @include text(18px, 21.1px);
 }
 
 @mixin text-promo {
@@ -101,6 +100,7 @@
   @include text-regular;
   font-size: 14px;
   line-height: 22.4px;
+  color: rgba(72, 72, 72, 0.87);
 }
 
 @mixin text-regular-less-lh {
