@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стажировки в Израиле</title>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/raleway-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/raleway-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- Pixel Glass -->
@@ -70,11 +77,22 @@
 
     <div class="description__video-wrapper">
       <div class="description__video">
-        <button class="description__video-btn">
+        <button class="description__video-btn" aria-label="включить видео">
           <svg class="description__video-btn-svg" width="15" height="19">
             <use xlink:href="#icon-play"></use>
           </svg>
         </button>
+
+        <picture>
+          <!-- 1х: 870px; 2x: 1740px -->
+          <source media="(min-width: 1024px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x" type="image/webp">
+
+          <!-- 1х: 320px; 2x: 640px -->
+          <source media="(max-width: 767px)" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x" type="image/webp">
+
+          <!-- 1х: 870px; 2x: 1740px -->
+          <img src="img/video-desktop@1x.png" srcset="img/video-desktop@2x.png 2x" width="870" height="460" loading="lazy" alt="Превью видео">
+        </picture>
       </div>
     </div>
   </section>
@@ -83,7 +101,7 @@
     <div class="container">
       <h2>Программы</h2>
       <div class="programs__wrapper">
-          <ul class="programs__list program" id="tab-nav" tabindex="0">
+          <ul class="programs__list program" id="tab-nav" tabindex="0" aria-label="список програм">
             <li class="program__item">
               <a class="program__link program__link--common" data-tab-name="tab-common" tabindex="0">Общие</a>
             </li>

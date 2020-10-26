@@ -39,14 +39,14 @@
   max-width: 870px;
   margin: 49px auto 0;
 
-  background-image: url("../img/video-desktop@1x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  // background-image: url("../img/video-desktop@1x.png");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/video-desktop@2x.png");
-  }
+  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  //   background-image: url("../img/video-desktop@2x.png");
+  // }
 }
 
 .description__video-btn {
@@ -105,10 +105,11 @@
 
 @media (max-width: $mobile-width) {
   .description {
-    padding-bottom: 0;
+    padding-bottom: 122px;
     background-image: url("../img/program-bg-mobile@1x.jpg");
-    background-position: right -48px top 197px;
-    background-size: 129%;
+    background-position: right -57px top 196px;
+    // background-size: 137% auto;
+    background-size: contain;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/program-bg-mobile@2x.jpg");
@@ -126,15 +127,22 @@
   }
 
   .description__video {
-    min-height: unset;
-    min-width: 320px;
-    padding-top: 68%;
+    position: relative;
+    min-height: 224px;
+    // width: 320px;
+    height: 100%;
+    overflow: hidden;
+  }
 
-    background-image: url("../img/video-mobile@1x.png");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/video-mobile@2x.png");
-    }
+  .description__video img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: none;
+    height: 100%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   .description__video-btn {
@@ -148,6 +156,7 @@
     background-color: rgba(255, 255, 255, 0.32);
     border: 0;
     border-radius: 50%;
+    z-index: 2;
 
     &::before {
       @include pseudo;
@@ -165,5 +174,11 @@
   .description__video-btn-svg {
     width: 12.5px;
     height: 15.83px;
+  }
+}
+
+@media (min-width: 330px) {
+  .description__video {
+    min-height: 350px;
   }
 }
