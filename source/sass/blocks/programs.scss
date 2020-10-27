@@ -28,7 +28,9 @@
 }
 
 .programs-content {
-  padding-left: 65px;
+  // padding-left: 65px;
+  margin-left: auto;
+  max-width: 65.7%;
 }
 
 .programs-content h3 {
@@ -45,6 +47,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .programs-content {
+    max-width: 62%;
+  }
+
   .programs__wrapper {
     padding-left: 0;
   }
@@ -53,6 +59,7 @@
     margin-left: 48px;
   }
 }
+
 
 @media (max-width: $mobile-width) {
   .programs {
@@ -80,6 +87,9 @@
 
   .programs-content {
     padding-left: 0;
+    margin-left: 0;
+    max-width: unset;
+    width: 100%;
   }
 
   .programs-content h3 {
@@ -120,4 +130,3 @@
     flex-shrink: 0;
   }
 }
-

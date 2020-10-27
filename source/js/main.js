@@ -168,14 +168,16 @@
 
 })();
 
-// ---------- свайперы список программ / жизнь в израиле --------------
+// ---------- свайперы список программ / жизнь в израиле / отзывы--------------
 
 (function () {
 
   var lifeSlider = document.querySelector('.life__slider');
   var programSlider = document.querySelector('.programs__slider');
+  var reviewSlider = document.querySelector('.reviews__slider');
   var myLifeSwiper;
   var myProgramSwiper;
+  var myReviewSwiper;
 
   function enableProgramSlider() {
     if (window.innerWidth <= 767 && programSlider.dataset.mobileProgram === 'false') {
@@ -240,8 +242,31 @@
     }
   }
 
+  function enableReviewSlider() {
+    myReviewSwiper = new window.Swiper(reviewSlider, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.reviews__swiper-pagination',
+        clickable: true,
+        type: 'fraction',
+      },
+      slideClass: 'reviews__slide',
+      wrapperClass: 'reviews__slider-wrapper',
+
+      navigation: {
+        nextEl: '.reviews__swiper-next',
+        prevEl: '.reviews__swiper-prev',
+      },
+    });
+
+    return myReviewSwiper;
+  }
+
   enableLifeSlider();
   enableProgramSlider();
+  enableReviewSlider();
 
   function enableSwipers() {
     enableLifeSlider();
@@ -251,3 +276,14 @@
   window.addEventListener('resize', enableSwipers);
 
 })();
+
+// -------------------- аккордион частые вопосы --------------------
+
+var questionBtns = document.querySelectorAll('.questions__question-btn');
+var activeClass = 'questions__item--active';
+
+questionBtns.forEach(function (item) {
+  item.addEventListener('click', function () {
+    item.parentElement.classList.toggle(activeClass);
+  });
+});
