@@ -166,76 +166,53 @@
 
   programsTabs.addEventListener('click', tabClickHandler);
 
-  // свайп списка табов
-  var xDown = null;
-  var yDown = null;
-
-  function touchStartHandler(evt) {
-    xDown = evt.touches[0].clientX;
-    yDown = evt.touches[0].clientY;
-  }
-
-  function touchMoveHandler(evt) {
-    if (!xDown || !yDown) {
-      return;
-    }
-
-    var xUp = evt.touches[0].clientX;
-    var yUp = evt.touches[0].clientY;
-
-    var xDiff = xDown - xUp;
-    var yDiff = yDown - yUp;
-
-    if (Math.abs(xDiff) > Math.abs(yDiff)) {
-      if (xDiff > 0) {
-        evt.preventDefault();
-        programsTabs.style.marginLeft = '-170%';
-        programsTabs.style.transition = '0.2s';
-
-      } else {
-        evt.preventDefault();
-        programsTabs.style.marginLeft = '-16px';
-        programsTabs.style.transition = '0.2s';
-      }
-    }
-    xDown = null;
-    yDown = null;
-  }
-
-  programsTabs.addEventListener('touchstart', touchStartHandler, false);
-  programsTabs.addEventListener('touchmove', touchMoveHandler, false);
-
 })();
 
-// -------------------- свайпер жизнь в израиле --------------------
+// ---------- свайперы список программ / жизнь в израиле --------------
 
 (function () {
 
-  var slider = document.querySelector('.swiper-container');
-  var breakpoint = window.matchMedia('(min-width:768px)');
-  var mySwiper;
+  var lifeSlider = document.querySelector('.life__slider');
+  var programSlider = document.querySelector('.programs__slider');
+  var myLifeSwiper;
+  var myProgramSwiper;
 
-  function checkBreakpoint() {
-    if (breakpoint.matches) {
+  function enableProgramSlider() {
+    if (window.innerWidth <= 767 && programSlider.dataset.mobileProgram === 'false') {
+      myProgramSwiper = new window.Swiper(programSlider, {
+        loop: true,
+        slideClass: 'programs__slide',
+        wrapperClass: 'programs__slider-wrapper',
 
-      if (mySwiper) {
-        mySwiper.destroy(true, true);
+        breakpoints: {
+          320: {
+            slidesPerView: 1.7,
+            slidesPerGroup: 1,
+          },
+          600: {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+          }
+        }
+      });
+
+      programSlider.dataset.programSwiper = 'true';
+    }
+
+    if (window.innerWidth > 767) {
+      programSlider.dataset.mobileProgram = 'false';
+      if (programSlider.classList.contains('swiper-container-initialized')) {
+        myProgramSwiper.destroy();
       }
-      return;
-
-    } else if (!breakpoint.matches) {
-
-      enableSwiper();
     }
   }
 
-  function enableSwiper() {
-
-    if (slider) {
-      mySwiper = new window.Swiper(slider, {
-
+  function enableLifeSlider() {
+    if (window.innerWidth <= 767 && lifeSlider.dataset.lifeSwiperOn === 'false') {
+      myLifeSwiper = new window.Swiper(lifeSlider, {
         loop: true,
-
+        slideClass: 'life__slide',
+        wrapperClass: 'life__slider-wrapper',
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -251,10 +228,26 @@
           }
         }
       });
+
+      lifeSlider.dataset.lifeSwiperOn = 'true';
+    }
+
+    if (window.innerWidth > 767) {
+      lifeSlider.dataset.lifeSwiperOn = 'false';
+      if (lifeSlider.classList.contains('swiper-container-initialized')) {
+        myLifeSwiper.destroy();
+      }
     }
   }
 
-  breakpoint.addListener(checkBreakpoint);
-  checkBreakpoint();
+  enableLifeSlider();
+  enableProgramSlider();
+
+  function enableSwipers() {
+    enableLifeSlider();
+    enableProgramSlider();
+  }
+
+  window.addEventListener('resize', enableSwipers);
 
 })();

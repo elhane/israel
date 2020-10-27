@@ -100,23 +100,25 @@
     <div class="container">
       <h2>Программы</h2>
       <div class="programs__wrapper">
-          <ul class="programs__list program" id="tab-nav" tabindex="0" aria-label="список програм">
-            <li class="program__item">
+        <div class="programs__slider" data-program-swiper-on="false">
+          <ul class="programs__list programs__slider-wrapper program" id="tab-nav" tabindex="0" aria-label="список програм">
+            <li class="program__item programs__slide">
               <a class="program__link program__link--common" data-tab-name="tab-common" tabindex="0">Общие</a>
             </li>
-            <li class="program__item program__item--active">
+            <li class="program__item programs__slide program__item--active">
               <a class="program__link program__link--academic" data-tab-name="tab-academic" tabindex="0">Академические</a>
             </li>
-            <li class="program__item">
+            <li class="program__item programs__slide">
               <a class="program__link program__link--internship" data-tab-name="tab-internship" tabindex="0">Стажировки</a>
             </li>
-            <li class="program__item">
+            <li class="program__item programs__slide">
               <a class="program__link program__link--volunteerism" data-tab-name="tab-volunteerism" tabindex="0">Волонтёрство</a>
             </li>
-            <li class="program__item">
+            <li class="program__item programs__slide">
               <a class="program__link program__link--religious" data-tab-name="tab-religious" tabindex="0">Религиозные</a>
             </li>
           </ul>
+        </div>
 
         <div class="programs-content">
           <div class="programs__tab tab-common">
@@ -186,27 +188,27 @@
     <div class="container">
       <h2>Жизнь в&#160;израиле</h2>
       <p>Помимо учёбы, в рамках программе у&#160;вас будет возможность путешествовать по стране и познакомиться&#160;с&#160;богатой культурно&#8209;исторической жизнью Израиля&#160;и&#160;его&#160;жителей.</p>
-      <div class="life__swiper-container swiper-container">
-        <ul class="life__list swiper-wrapper">
-          <li class="life__item life__item--history swiper-slide">
+      <div class="life__swiper-container life__slider" data-life-swiper-on="false">
+        <ul class="life__list life__slider-wrapper">
+          <li class="life__item life__item--history life__slide">
             <h4>Экскурсии по Израилю и&#160;знакомство с его историей</h4>
           </li>
-          <li class="life__item life__item--hebrew swiper-slide">
+          <li class="life__item life__item--hebrew life__slide">
             <h4>Изучение иврита</h4>
           </li>
-          <li class="life__item life__item--study swiper-slide">
+          <li class="life__item life__item--study life__slide">
             <h4>Обучение современным навыкам и профессиям</h4>
           </li>
-          <li class="life__item life__item--creative swiper-slide">
+          <li class="life__item life__item--creative life__slide">
             <h4>Совместные творческие проекты
               с&#160;израильской молодёжью
              </h4>
           </li>
-          <li class="life__item life__item--leader swiper-slide">
+          <li class="life__item life__item--leader life__slide">
             <h4>Развитие лидерства</h4>
           </li>
         </ul>
-        <div class="life__swiper-pagination swiper-pagination"></div>
+        <div class="swiper-pagination life__slider-pagination"></div>
       </div>
     </div>
   </section>

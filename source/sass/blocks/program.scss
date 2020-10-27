@@ -105,12 +105,12 @@
 
 @media (max-width: $mobile-width) {
   .program {
-    display: flex;
+    // display: flex;
     min-height: 48px;
     // height: 48px;
-    margin-right: -16px;
-    margin-left: -61px;
-    overflow-x: hidden;
+    // margin-right: -16px;
+    // margin-left: -61px;
+    // overflow-x: hidden;
   }
 
   .program__item {

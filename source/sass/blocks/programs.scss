@@ -104,3 +104,20 @@
   }
 }
 
+@media (max-width: $mobile-width) {
+  .programs__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .programs__slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .programs__slide {
+    flex-shrink: 0;
+  }
+}
+

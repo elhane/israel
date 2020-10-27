@@ -143,7 +143,6 @@
   }
 }
 
-
 @media (max-width: $mobile-width) {
   .life {
     padding-top: 52px;
@@ -175,11 +174,11 @@
     font-size: 1.1em;
   }
 
-
   .life__list {
+    flex-wrap: nowrap;
     padding-left: 0;
     width: max-content;
-    height: 400px;
+    min-height: 400px;
   }
 
   .life__item {
@@ -190,6 +189,7 @@
 
     &--history {
       position: initial;
+      height: unset;
     }
 
 
@@ -200,8 +200,28 @@
     }
   }
 
-  .life__swiper-container {
-    padding-bottom: 40px;
+  .life__slider {
+    position: relative;
+    width: 100%;
+    height: 486px;
+    overflow: hidden;
+    padding-bottom: 21px;
     margin-top: -26px;
+  }
+
+  .life__slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .life__slide {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .life__slider-pagination {
+    display: none;
   }
 }
