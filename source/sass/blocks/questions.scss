@@ -105,8 +105,7 @@
   }
 
   &:focus {
-    outline: dashed 2px rgba(255, 195, 65, 0.5);
-    outline-offset: 0;
+    background: linear-gradient(to top right, rgba(251, 233, 229, 0) 40%, rgba(251, 233, 229, 0.5) 60%);
   }
 
   &:active {

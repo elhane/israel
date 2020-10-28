@@ -1034,6 +1034,7 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
   padding: 33px 0 0 0;
   max-width: 1202px;
+  width: 88%;
   font-size: 15px;
   line-height: 18px;
   font-weight: 500; }
@@ -1926,9 +1927,7 @@ button.swiper-pagination-bullet {
   font-weight: 500;
   letter-spacing: 0.2px;
   color: #ffffff;
-  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
-  -webkit-clip-path: polygon(0 0, 87% 0%, 100% 51%, 87% 100%, 0 99%);
-          clip-path: polygon(0 0, 87% 0%, 100% 51%, 87% 100%, 0 99%); }
+  background-image: url("../img/svg/gradient-arrow.svg"); }
   .program__item--active .program__link--common::before, .program__item--active .program__link--academic::before,
   .program__item--active:hover .program__link--common::before,
   .program__item--active:hover .program__link--academic::before,
@@ -2700,8 +2699,8 @@ button.swiper-pagination-bullet {
   .questions__question-btn:hover {
     color: #ffc341; }
   .questions__question-btn:focus {
-    outline: dashed 2px rgba(255, 195, 65, 0.5);
-    outline-offset: 0; }
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(40%, rgba(251, 233, 229, 0)), color-stop(60%, rgba(251, 233, 229, 0.5)));
+    background: linear-gradient(to top right, rgba(251, 233, 229, 0) 40%, rgba(251, 233, 229, 0.5) 60%); }
   .questions__question-btn:active {
     opacity: 0.5; }
 
@@ -2818,6 +2817,18 @@ button.swiper-pagination-bullet {
 
 .social__svg {
   fill: #e3e3e3; }
+
+.social__link {
+  position: relative; }
+  .social__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; }
 
 .social__link:hover .social__svg {
   fill: #ffc341; }
@@ -3177,6 +3188,13 @@ button.swiper-pagination-bullet {
     bottom: 0;
     width: 79%;
     border-bottom: 2px dashed #1fc0fc; }
+  .details__city-link:hover {
+    color: #1fc0fc; }
+  .details__city-link:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.5);
+    outline-offset: 3px; }
+  .details__city-link:active {
+    opacity: 0.5; }
 
 .details__curator p {
   font-size: 17px;

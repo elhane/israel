@@ -105,7 +105,21 @@
     width: 79%;
     border-bottom: 2px dashed $blue;
   }
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.5);
+    outline-offset: 3px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
+
 
 .details__curator p {
   @include text(17px, 28.9px);
