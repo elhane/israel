@@ -15,7 +15,6 @@
   margin-bottom: 24px;
 
   @include h2;
-  // color: $blue;
   text-align: center;
 }
 
@@ -38,15 +37,6 @@
   min-height: 460px;
   max-width: 870px;
   margin: 49px auto 0;
-
-  // background-image: url("../img/video-desktop@1x.png");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-
-  // @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  //   background-image: url("../img/video-desktop@2x.png");
-  // }
 }
 
 .description__video-btn {
@@ -129,7 +119,6 @@
   .description__video {
     position: relative;
     min-height: 224px;
-    // width: 320px;
     height: 100%;
     overflow: hidden;
   }
@@ -149,7 +138,6 @@
     position: absolute;
     left: calc(50% - 40px);
     top: calc(50% - 30px);
-    // top: 54%;
     padding: 0;
     width: 80px;
     height: 80px;

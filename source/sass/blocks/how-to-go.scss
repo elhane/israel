@@ -54,6 +54,7 @@
 }
 
 .how-to-go__inner span {
+  position: relative;
   display: block;
   margin-top: 45px;
   padding-left: 13px;
@@ -61,9 +62,15 @@
   @include text-regular;
   line-height: 23.9px;
   color: rgba(72, 72, 72, 0.5);
-  border-left: 4px solid transparent;
-  border-image: $yellow-gradient;
-  border-image-slice: 1;
+
+  &::before {
+    @include pseudo;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: $yellow-gradient;
+  }
 }
 
 .how-to-go__list {
@@ -76,7 +83,7 @@
     @include pseudo;
     left: 3px;
     top: 11px;
-    height: 90%;
+    height: 94%;
     width: 1px;
     border-left: 1px dashed rgba(72, 72, 72, 0.2);
   }

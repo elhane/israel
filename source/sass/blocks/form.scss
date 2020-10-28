@@ -8,6 +8,10 @@
     margin-left: 98px;
     margin-top: 64px;
   }
+
+  &--feedback {
+    flex-direction: row;
+  }
 }
 
 .form button {
@@ -42,10 +46,18 @@
 }
 
 .form--want-to-go button {
+  position: relative;
   margin: 0;
   margin-left: -101px;
   width: auto;
   min-width: 216px;
+  z-index: 10;
+}
+
+.form--feedback button {
+  margin: 0;
+  margin-bottom: 19px;
+  max-width: 216px;
 }
 
 .form__field--text {
@@ -72,6 +84,14 @@
 
 .form__field--want-to-go {
   margin: 0;
+}
+
+.form__field--feedback {
+  margin-bottom: 19px;
+}
+
+.form__field--feedback input {
+  width: 250px;
 }
 
 .form__field--text input::placeholder {
@@ -158,6 +178,10 @@
   }
 }
 
+.form__field--want-to-go.form__field--error::after {
+  left: 30px;
+}
+
 .form__field--error input {
   border: 2px solid $red;
 }
@@ -169,7 +193,6 @@
 .form__field--error label::before {
   border: 2px solid $red;
 }
-
 
 @media (max-width: $mobile-width) {
   .form {
@@ -211,5 +234,9 @@
   .form__field--want-to-go,
   .form__field--want-to-go input {
     width: 100%;
+  }
+
+  .form__field--feedback {
+    margin-bottom: 9px;
   }
 }

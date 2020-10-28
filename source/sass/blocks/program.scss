@@ -84,7 +84,6 @@
   font-weight: 500;
   letter-spacing: 0.2px;
   color: $white;
-  // background-image: url("../img/svg/gradient-arrow.svg");
   background: $yellow-gradient;
   clip-path: polygon(0 0, 87% 0%, 100% 51%, 87% 100%, 0 99%);
 
@@ -105,17 +104,11 @@
 
 @media (max-width: $mobile-width) {
   .program {
-    // display: flex;
     min-height: 48px;
-    // height: 48px;
-    // margin-right: -16px;
-    // margin-left: -61px;
-    // overflow-x: hidden;
   }
 
   .program__item {
     margin-bottom: 0;
-    // margin-right: 7px;
   }
 
   .program__link {

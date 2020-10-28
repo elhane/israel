@@ -5,8 +5,19 @@
   var callBtn = document.querySelector('.header__link--call');
   var callPopup = document.querySelector('.modal-overlay--call');
   var callPopupSubmitBtn = callPopup.querySelector('button[type=submit]');
+
   var wantToGoForm = document.querySelector('.want-to-go__form');
   var wantToGoFormBtn = wantToGoForm.querySelector('button[type=submit]');
+  var wantToGoFormInputs = wantToGoForm.querySelectorAll('input');
+  // var wantToGoNameInput = wantToGoForm.querySelector('[name=user-name]');
+  var wantToGoPhoneInput = wantToGoForm.querySelector('[name=user-phone]');
+
+  var feedbackForm = document.querySelector('.details__feedback-form');
+  var feedbackFormBtn = feedbackForm.querySelector('button[type=submit]');
+  var feedbackFormInputs = feedbackForm.querySelectorAll('input');
+  var feedbackNameInput = feedbackForm.querySelector('[name=user-name]');
+  var feedbackPhoneInput = feedbackForm.querySelector('[name=user-phone]');
+
   var callPopupCloseBtn = callPopup.querySelector('.modal-call__btn-close');
   var callAcceptedPopup = document.querySelector('.modal-overlay--call-accepted');
   var callAcceptedPopupCloseBtn = callAcceptedPopup.querySelector('.modal-call__btn-close');
@@ -52,6 +63,16 @@
     validateFormInputs(callFormInputs);
   }
 
+  // проверка инпутов FeedbackForm
+  function onFeedbackFormInput() {
+    validateFormInputs(feedbackFormInputs);
+  }
+
+  // проверка инпутов FeedbackForm
+  function onWantToGoFormFormInput() {
+    validateFormInputs(wantToGoFormInputs);
+  }
+
   // проверка формы CallForm
   function onCallFormSubmit(evt) {
     if (!nameInput.value || !phoneInput.value || !userAgreeInput.value) {
@@ -79,9 +100,22 @@
     closePopup(callPopup);
   }
 
-  // открытие попапа по клику на кнопку перезвоните мне
+  // открытие попапа по клику на кнопку перезвоните мне / хочу поехать
   function onWantToGoFormBtnClick(evt) {
-    openPopup(callAcceptedPopup, evt);
+    evt.preventDefault();
+
+    if (wantToGoPhoneInput.validity.valid) {
+      openPopup(callAcceptedPopup, evt);
+    }
+  }
+
+  // открытие попапа по клику на кнопку перезвоните мне / узнать подробности
+  function onFeedbackFormBtnClick(evt) {
+    evt.preventDefault();
+
+    if (feedbackNameInput.validity.valid && feedbackPhoneInput.validity.valid) {
+      openPopup(callAcceptedPopup, evt);
+    }
   }
 
   // закрытие попапа по клику на крестик попапа заявка принята
@@ -114,14 +148,21 @@
     }
   }
 
+  // проверка инпутов форм Хочу поехать / Узнать подробности
+  feedbackForm.addEventListener('input', onFeedbackFormInput);
+  wantToGoForm.addEventListener('input', onWantToGoFormFormInput);
+
   // клик по ссылке "заказать звонок"
   callBtn.addEventListener('click', onCallBtnClick);
 
   // клик по крестику попапа заказать звонок
   callPopupCloseBtn.addEventListener('click', onCallPopupCloseBtnClick);
 
-  // клик по кнопке перезвоните мне
+  // клик по кнопке перезвоните мне в блоке Хочу поехать
   wantToGoFormBtn.addEventListener('click', onWantToGoFormBtnClick);
+
+  // клик по кнопке перезвоните мне в блоке Узнать подробности
+  feedbackFormBtn.addEventListener('click', onFeedbackFormBtnClick);
 
   // клик по крестику попапа заявка принята
   callAcceptedPopupCloseBtn.addEventListener('click', onCallAcceptedPopupCloseBtnClick);

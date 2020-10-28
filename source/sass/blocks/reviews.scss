@@ -1,5 +1,5 @@
 .reviews {
-  padding-bottom: 60px;
+  padding-bottom: 55px;
   background-image:
     url("../img/review-sketch@1x.png"),
     url("../img/review-bg@1x.jpg");
@@ -103,27 +103,8 @@
 }
 
 .reviews__social {
-  display: flex;
-  justify-content: space-between;
   width: 105px;
   margin-left: auto;
-}
-
-.reviews__social-svg {
-  fill: $gray;
-}
-
-.reviews__social-link:hover .reviews__social-svg {
-  fill: $yellow;
-}
-
-.reviews__social-link:focus {
-  outline: dashed 2px rgba(255, 195, 65, 0.5);
-  outline-offset: 2px;
-}
-
-.reviews__social-link:active .reviews__social-svg {
-  fill: darken($yellow, 15%);
 }
 
 .reviews__slider {

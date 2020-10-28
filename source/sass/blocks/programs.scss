@@ -28,7 +28,6 @@
 }
 
 .programs-content {
-  // padding-left: 65px;
   margin-left: auto;
   max-width: 65.7%;
 }
@@ -60,12 +59,10 @@
   }
 }
 
-
 @media (max-width: $mobile-width) {
   .programs {
     padding-bottom: 10px;
     margin-top: -126px;
-    // background-size: 320px auto;
     background-size: contain;
     background-position: right -23px top 200px;
   }
@@ -105,7 +102,6 @@
   }
 }
 
-// ТАБЫ
 .programs__tab {
   display: none;
 

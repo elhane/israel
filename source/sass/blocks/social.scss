@@ -1,0 +1,24 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include list-reset;
+}
+
+.social__svg {
+  fill: $gray;
+}
+
+.social__link:hover .social__svg {
+  fill: $yellow;
+}
+
+.social__link:focus {
+  outline: dashed 2px rgba(255, 195, 65, 0.5);
+  outline-offset: 2px;
+}
+
+.social__link:active .social__svg {
+  fill: darken($yellow, 15%);
+}
