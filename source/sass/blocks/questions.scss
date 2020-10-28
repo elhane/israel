@@ -74,7 +74,6 @@
   color: inherit;
   background-color: transparent;
   border: none;
-  // border-bottom: 0.5px solid $black;
   outline: 0;
   cursor: pointer;
 
@@ -93,7 +92,6 @@
 
   &::after {
     @include pseudo;
-    // top: calc(50% - 9px);
     top: 33px;
     right: 35px;
     width: 18px;
@@ -103,7 +101,16 @@
   }
 
   &:hover {
-    color: $blue;
+    color: $yellow;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 195, 65, 0.5);
+    outline-offset: 0;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -182,7 +189,6 @@
   }
 
   .questions__item {
-    // margin-bottom: 18px;
     margin-bottom: 0;
 
     &::after {
@@ -196,9 +202,7 @@
   }
 
   .questions__question-btn {
-    // min-height: 68px;
     min-height: 88px;
-    // padding: 18px 28px 19px 25px;
     padding: 37px 28px 22px 25px;
 
 
