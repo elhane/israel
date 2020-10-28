@@ -5,19 +5,15 @@
   var callBtn = document.querySelector('.header__link--call');
   var callPopup = document.querySelector('.modal-overlay--call');
   var callPopupSubmitBtn = callPopup.querySelector('button[type=submit]');
-
   var wantToGoForm = document.querySelector('.want-to-go__form');
   var wantToGoFormBtn = wantToGoForm.querySelector('button[type=submit]');
   var wantToGoFormInputs = wantToGoForm.querySelectorAll('input');
-  // var wantToGoNameInput = wantToGoForm.querySelector('[name=user-name]');
   var wantToGoPhoneInput = wantToGoForm.querySelector('[name=user-phone]');
-
   var feedbackForm = document.querySelector('.details__feedback-form');
   var feedbackFormBtn = feedbackForm.querySelector('button[type=submit]');
   var feedbackFormInputs = feedbackForm.querySelectorAll('input');
   var feedbackNameInput = feedbackForm.querySelector('[name=user-name]');
   var feedbackPhoneInput = feedbackForm.querySelector('[name=user-phone]');
-
   var callPopupCloseBtn = callPopup.querySelector('.modal-call__btn-close');
   var callAcceptedPopup = document.querySelector('.modal-overlay--call-accepted');
   var callAcceptedPopupCloseBtn = callAcceptedPopup.querySelector('.modal-call__btn-close');
