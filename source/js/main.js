@@ -137,8 +137,7 @@
 
   // закрытие по клику на оверлей
   function overlayClickHandler(evt) {
-    if (evt.target.matches('.modal-overlay')) {
-      evt.preventDefault();
+    if (evt.target.classList.contains('modal-overlay')) {
       closePopup(callPopup);
       closePopup(callAcceptedPopup);
     }
