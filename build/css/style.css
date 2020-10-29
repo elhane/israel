@@ -592,7 +592,7 @@ img {
 .swiper-button-next:after {
   font-family: swiper-icons;
   font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
+  text-transform: none;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
@@ -685,6 +685,7 @@ img {
   width: 8px;
   height: 8px;
   display: inline-block;
+  vertical-align: middle;
   border-radius: 100%;
   background: #000;
   opacity: 0.2; }
@@ -724,6 +725,7 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
+  vertical-align: middle;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms transform, 200ms top;
@@ -2194,6 +2196,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 3px;
     left: 14px;
+    vertical-align: middle;
     counter-increment: myCounter;
     font-size: 17px;
     line-height: 29px;
@@ -2714,6 +2717,7 @@ button.swiper-pagination-bullet {
     position: absolute;
     top: 7px;
     left: -2px;
+    vertical-align: middle;
     counter-increment: myCounter;
     font-size: 28px;
     line-height: 47.6px;
@@ -2868,6 +2872,7 @@ button.swiper-pagination-bullet {
 .reviews dt,
 .reviews dd {
   display: inline-block;
+  vertical-align: middle;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;

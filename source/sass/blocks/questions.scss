@@ -129,6 +129,7 @@
     @include pseudo($display: inline-block, $content: counter(myCounter));
     top: 7px;
     left: -2px;
+    vertical-align: middle;
     counter-increment: myCounter;
 
     @include text(28px, 47.6px);

@@ -30,7 +30,7 @@
   </style>
   <link href="https://yoksel.github.io/pixel-glass-js/styles.css" rel="stylesheet">
   <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-  <!--  Pixel Glass -->
+  <!-- Pixel Glass -->
 
 </head>
 <body>
@@ -44,20 +44,18 @@
         <a class="header__link header__link--phone" href="tel:97226216581" aria-label="Номер телефона">+ (972) 2 – 621 – 6581</a>
       </li>
       <li class="header__list-item header__list-item--logo">
-        <a class="header__logo" href="">
+        <a class="header__logo">
           <img src="img/logo@1x.png" width="137" height="48" srcset="img/logo@1x.png 1x, img/logo@2x.png 2x" alt="логотип проекта Маса">
         </a>
       </li>
       <li class="header__list-item">
-        <a class="header__link header__link--call" href="">заказать звонок</a>
+        <a class="header__link header__link--call" href="#">заказать звонок</a>
       </li>
-
     </ul>
   </header>
 
   <section class="intro">
     <h1 class="visually-hidden">Проект "Маса": Cтажировки в Израиле</h1>
-
     <div class="intro__wrapper">
       <p>Учёба, путешествие и карьера для&#160;еврейской молодёжи</p>
       <a class="intro__scroll-btn" href="#description" aria-label="скролл вниз">
@@ -73,7 +71,6 @@
       <h2>О программе</h2>
       <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&#160;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
     </div>
-
     <div class="description__video-wrapper">
       <div class="description__video">
         <button class="description__video-btn" aria-label="включить видео">
@@ -81,7 +78,6 @@
             <use xlink:href="#icon-play"></use>
           </svg>
         </button>
-
         <picture>
           <!-- 1х: 870px; 2x: 1740px -->
           <source media="(min-width: 1024px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x" type="image/webp">
@@ -100,7 +96,6 @@
     <div class="container">
       <h2>Программы</h2>
       <div class="programs__wrapper">
-
         <div class="programs__slider" data-program-swiper-on="false">
           <ul class="programs__list program programs__slider-wrapper" id="tab-nav" tabindex="0" aria-label="список програм">
             <li class="program__item programs__slide">
@@ -120,7 +115,6 @@
             </li>
           </ul>
         </div>
-
         <div class="programs-content">
           <div class="programs__tab tab-common">
             <h3>Общие</h3>
@@ -153,14 +147,11 @@
       <h2>Хочу поехать!</h2>
       <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
       <form class="want-to-go__form form form--want-to-go" action="https://echo.htmlacademy.ru/courses" method="post">
-
         <div class="form__field form__field--text form__field--want-to-go">
           <input type="tel" name="user-phone" id="want-to-go-user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
           <label class="visually-hidden" for="want-to-go-user-phone">Номер телефона</label>
         </div>
-
-        <button type="submit">перезвоните мне</button>
-
+        <button type="submit" id="order-call-want-to-go">перезвоните мне</button>
       </form>
     </div>
   </section>
@@ -171,14 +162,12 @@
         <h2>Как поехать</h2>
         <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&#160;вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
         <h3>Чтобы иметь возможность получить грант на обучение от&#160;4200 до&#160;8400$, вы должны:</h3>
-
         <ul class="how-to-go__list">
           <li class="how-to-go__list-item">Быть в возрасте от 16 до 30 лет</li>
           <li class="how-to-go__list-item">Иметь оконченное среднее образование</li>
           <li class="how-to-go__list-item">Иметь документально подтверждённые еврейские корни и&#160;пройти консульскую проверку</li>
           <li class="how-to-go__list-item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
         </ul>
-
         <span>Если вы не подходите по этим правилам, вы всё равно можете
           принять участие в программе «Маса», оплатив её полную стоимость.</span>
       </div>
@@ -212,12 +201,13 @@
       </div>
     </div>
   </section>
+
   <section class="promo">
     <div class="container promo__wrapper">
       <div class="promo__inner">
         <h2>#masaisrael</h2>
         <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о&#160;жизни, учёбе и путешествиях в&#160;Израиле.</p>
-        <a class="button promo__button" href="">
+        <a class="button promo__button" href="#">
           <svg class="promo__svg" width="24" height="24">
             <use xlink:href="#icon-instagram"></use>
           </svg>
@@ -231,7 +221,6 @@
     <div class="container questions__wrapper">
       <div class="questions__inner">
         <h2>частые вопросы</h2>
-
         <ul class="questions__list">
           <li class="questions__item">
             <button class="questions__question-btn">Кто организатор? Какие сроки у программы?</button>
@@ -279,7 +268,6 @@
       <h2>Отзывы</h2>
       <div class="reviews__slider">
         <ul class="reviews__list reviews__slider-wrapper">
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -293,7 +281,6 @@
                 <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Ольга Михайлова</h3>
               <dl>
@@ -302,27 +289,24 @@
               </dl>
               <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
               <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -331,7 +315,6 @@
               </ul>
             </div>
           </li>
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -345,7 +328,6 @@
                 <img src="img/review3-desktop@1x.png" srcset="img/review3-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Анастасия Соколова</h3>
               <dl>
@@ -354,27 +336,24 @@
               </dl>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores excepturi officia quisquam iure, deleniti libero natus, nulla dolore nostrum ad nisi in illo cumque optio laborum repellendus quidem molestiae magni?</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur sequi est nobis, qui ratione. Magni ut inventore ratione repellat facere, vero temporibus, explicabo impedit rem reprehenderit saepe ad! Nesciunt sunt iste explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -383,7 +362,6 @@
               </ul>
             </div>
           </li>
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -397,7 +375,6 @@
                 <img src="img/review2-desktop@1x.png" srcset="img/review2-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Михаил и Екатерина Фроловы</h3>
               <dl>
@@ -406,27 +383,24 @@
               </dl>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod nisi culpa veritatis assumenda pariatur explicabo aperiam eveniet necessitatibus? Quia totam tempora delectus reprehenderit praesentium!</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil possimus unde eius sequi omnis. Dolorum at, accusantium itaque quidem nobis, fugiat iste earum nam saepe ad adipisci cumque voluptate quibusdam sint ipsam placeat sapiente possimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -435,7 +409,6 @@
               </ul>
             </div>
           </li>
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -449,7 +422,6 @@
                 <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Ольга Михайлова</h3>
               <dl>
@@ -458,27 +430,24 @@
               </dl>
               <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
               <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -487,7 +456,6 @@
               </ul>
             </div>
           </li>
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -501,7 +469,6 @@
                 <img src="img/review2-desktop@1x.png" srcset="img/review2-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Михаил и Екатерина Фроловы</h3>
               <dl>
@@ -510,27 +477,24 @@
               </dl>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod nisi culpa veritatis assumenda pariatur explicabo aperiam eveniet necessitatibus? Quia totam tempora delectus reprehenderit praesentium!</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil possimus unde eius sequi omnis. Dolorum at, accusantium itaque quidem nobis, fugiat iste earum nam saepe ad adipisci cumque voluptate quibusdam sint ipsam placeat sapiente possimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -539,7 +503,6 @@
               </ul>
             </div>
           </li>
-
           <li class="reviews__item reviews__slide">
             <div class="reviews__imgage-wrapper">
               <picture>
@@ -553,7 +516,6 @@
                 <img src="img/review3-desktop@1x.png" srcset="img/review3-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
               </picture>
             </div>
-
             <div class="reviews__slide-inner">
               <h3>Анастасия Соколова</h3>
               <dl>
@@ -562,27 +524,24 @@
               </dl>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores excepturi officia quisquam iure, deleniti libero natus, nulla dolore nostrum ad nisi in illo cumque optio laborum repellendus quidem molestiae magni?</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur sequi est nobis, qui ratione. Magni ut inventore ratione repellat facere, vero temporibus, explicabo impedit rem reprehenderit saepe ad! Nesciunt sunt iste explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-
-              <a class="reviews__link" href="">Читать подробнее</a>
+              <a class="reviews__link" href="#">Читать подробнее</a>
               <ul class="reviews__social social">
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Фейсбук">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-facebook"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Твиттер">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-twitter"></use>
                     </svg>
                   </a>
                 </li>
-
                 <li class="reviews__social-item social__item">
-                  <a href="" class="reviews__social-link social__link" aria-label="Инстаграм">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм">
                     <svg class="reviews__social-svg social__svg" width="24" height="24">
                       <use xlink:href="#icon-instagram"></use>
                     </svg>
@@ -591,7 +550,6 @@
               </ul>
             </div>
           </li>
-
         </ul>
         <div class="reviews__swiper-controls">
           <div class="reviews__swiper-pagination"></div>
@@ -606,22 +564,19 @@
 
   <section class="details">
     <div class="details__container">
-
       <div class="details__contacts-wrapper">
         <div class="details__inner">
           <h2>Узнать подробности</h2>
-
           <div class="details__city">
             <p>Ваш город:</p>
-            <a class="details__city-link" href="">новосибирск</a>
+            <a class="details__city-link" href="#">новосибирск</a>
           </div>
-
           <div class="details__curator">
             <div class="details__curator__top">
               <div class="details__curator-img-wrapper">
                 <picture>
                   <!-- 1х: 112px; 2x: 224px -->
-                  <!-- <source srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x" type="image/webp">
 
                   <!-- 1х: 112px; 2x: 224px -->
                   <img src="img/curator@1x.png" srcset="img/curator@2x.png 2x" width="112" height="112" loading="lazy" alt="фото автора отзыва">
@@ -635,23 +590,21 @@
                 <p>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
                 <ul class="details__social social">
                   <li class="details__social-item social__item">
-                    <a href="" class="details__social-link social__link" aria-label="Фейсбук">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
                       <svg class="details__social-svg social__svg" width="24" height="24">
                         <use xlink:href="#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="details__social-item social__item">
-                    <a href="" class="details__social-link social__link" aria-label="Фейсбук">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
                       <svg class="details__social-svg social__svg" width="24" height="24">
                         <use xlink:href="#icon-whatsapp"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="details__social-item social__item">
-                    <a href="" class="details__social-link social__link" aria-label="Фейсбук">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
                       <svg class="details__social-svg social__svg" width="24" height="24">
                         <use xlink:href="#icon-telegram"></use>
                       </svg>
@@ -662,9 +615,7 @@
             </div>
             <p>Куратор является опытным специалистом агентства Сохнут и&#160;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&#160;подробнее о программах и выберите свою !</p>
           </div>
-
         </div>
-
         <div class="details__map-wrapper">
           <picture>
             <!-- 1х: 702px; 2x: 1404px -->
@@ -675,24 +626,21 @@
           </picture>
         </div>
       </div>
-
       <div class="details__feedback-wrapper">
         <div class="details__feedback-text">
           <h3>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</h3>
           <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
         </div>
-
         <form class="details__feedback-form form form--feedback" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="form__field form__field--text form__field--feedback">
             <input type="text" name="user-name" id="feedback-user-name" placeholder="имя" pattern="^[А-Яа-яЁё\s]+$" required="">
             <label class="visually-hidden" for="feedback-user-name">Имя</label>
           </div>
-
           <div class="form__field form__field--text form__field--phone form__field--feedback">
             <input type="tel" name="user-phone" id="feedback-user-phone" placeholder="+7 (923) 41" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
             <label class="visually-hidden" for="feedback-user-phone">Номер телефона</label>
           </div>
-          <button type="submit">перезвоните мне</button>
+          <button type="submit" id="order-call-feedback">перезвоните мне</button>
         </form>
       </div>
     </div>
@@ -700,31 +648,27 @@
 
   <footer class="footer">
     <div class="container footer__wrapper">
-      <a class="footer__logo" href="">
+      <a class="footer__logo">
         <img src="img/logo-footer@1x.png" width="85" height="27" srcset="img/logo-footer@1x.png 1x, img/logo-footer@2x.png 2x" alt="логотип проекта Маса">
       </a>
-
       <p>Copyright someDesignCompany ©2019</p>
-
       <ul class="footer__social social">
         <li class="social__item">
-          <a href="" class="social__link" aria-label="Фейсбук">
+          <a href="#" class="social__link" aria-label="Фейсбук">
             <svg class="social__svg footer__social-svg" width="24" height="24">
               <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
-
         <li class="social__item">
-          <a href="" class="social__link" aria-label="Твиттер">
+          <a href="#" class="social__link" aria-label="Твиттер">
             <svg class="social__svg footer__social-svg" width="24" height="24">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
-
         <li class="social__item">
-          <a href="" class="social__link" aria-label="Инстаграм">
+          <a href="#" class="social__link" aria-label="Инстаграм">
             <svg class="social__svg footer__social-svg" width="24" height="24">
               <use xlink:href="#icon-instagram"></use>
             </svg>
@@ -732,11 +676,9 @@
         </li>
       </ul>
     </div>
-
   </footer>
 
   <!-- Модальные окна -->
-
   <div class="modal-overlay modal-overlay--call modal-overlay--closed">
     <div class="modal-call">
       <h3>Заказать звонок</h3>
@@ -746,20 +688,16 @@
           <input type="text" name="user-name" id="user-name" placeholder="имя" pattern="^[А-Яа-яЁё\s]+$" required="">
           <label class="visually-hidden" for="user-name">Имя</label>
         </div>
-
         <div class="form__field form__field--text form__field--phone">
           <input type="tel" name="user-phone" id="user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
           <label class="visually-hidden" for="user-phone">Номер телефона</label>
         </div>
-
-        <button type="submit">перезвоните мне</button>
-
+        <button type="submit" id="order-call">перезвоните мне</button>
         <div class="form__field form__field--checkbox">
           <input type="checkbox" name="user-agree" id="user-agree" checked="" required="">
           <label for="user-agree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>
-
       <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </div>
   </div>
@@ -768,7 +706,6 @@
     <div class="modal-call modal-call--accepted">
       <h3>Заявка принята</h3>
       <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-
       <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       <button class="modal-call__btn modal-call__btn--accepted modal-overlay__btn button" type="button">Понятно</button>
     </div>

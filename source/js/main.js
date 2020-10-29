@@ -4,25 +4,25 @@
 (function () {
   var callBtn = document.querySelector('.header__link--call');
   var callPopup = document.querySelector('.modal-overlay--call');
-  var callPopupSubmitBtn = callPopup.querySelector('button[type=submit]');
+  var callPopupSubmitBtn = callPopup.querySelector('#order-call');
   var wantToGoForm = document.querySelector('.want-to-go__form');
-  var wantToGoFormBtn = wantToGoForm.querySelector('button[type=submit]');
+  var wantToGoFormBtn = wantToGoForm.querySelector('#order-call-want-to-go');
   var wantToGoFormInputs = wantToGoForm.querySelectorAll('input');
-  var wantToGoPhoneInput = wantToGoForm.querySelector('[name=user-phone]');
+  var wantToGoPhoneInput = wantToGoForm.querySelector('#want-to-go-user-phone');
   var feedbackForm = document.querySelector('.details__feedback-form');
-  var feedbackFormBtn = feedbackForm.querySelector('button[type=submit]');
+  var feedbackFormBtn = feedbackForm.querySelector('#order-call-feedback');
   var feedbackFormInputs = feedbackForm.querySelectorAll('input');
-  var feedbackNameInput = feedbackForm.querySelector('[name=user-name]');
-  var feedbackPhoneInput = feedbackForm.querySelector('[name=user-phone]');
+  var feedbackNameInput = feedbackForm.querySelector('#feedback-user-name');
+  var feedbackPhoneInput = feedbackForm.querySelector('#feedback-user-phone');
   var callPopupCloseBtn = callPopup.querySelector('.modal-call__btn-close');
   var callAcceptedPopup = document.querySelector('.modal-overlay--call-accepted');
   var callAcceptedPopupCloseBtn = callAcceptedPopup.querySelector('.modal-call__btn-close');
   var callAcceptedBtn = callAcceptedPopup.querySelector('.modal-call__btn--accepted');
   var callForm = callPopup.querySelector('form');
   var callFormInputs = callForm.querySelectorAll('input');
-  var nameInput = callPopup.querySelector('[name=user-name]');
-  var phoneInput = callPopup.querySelector('[name=user-phone]');
-  var userAgreeInput = callPopup.querySelector('[name=user-agree]');
+  var nameInput = callPopup.querySelector('#user-name');
+  var phoneInput = callPopup.querySelector('#user-phone');
+  var userAgreeInput = callPopup.querySelector('#user-agree');
   var storageName = localStorage.getItem('nameInput');
   var storagePhone = localStorage.getItem('phoneInput');
 
@@ -74,7 +74,6 @@
     if (!nameInput.value || !phoneInput.value || !userAgreeInput.value) {
       evt.preventDefault();
     } else {
-      evt.preventDefault();
       openPopup(callAcceptedPopup, evt);
     }
   }
@@ -201,7 +200,9 @@
     activeTab.classList.add('programs__tab--active'); // покзаываем содержимое таба
   }
 
-  programsTabs.addEventListener('click', tabClickHandler);
+  if (programsTabs) {
+    programsTabs.addEventListener('click', tabClickHandler);
+  }
 
 })();
 
@@ -217,87 +218,92 @@
   var myReviewSwiper;
 
   function enableProgramSlider() {
-    if (window.innerWidth <= 767 && programSlider.dataset.mobileProgram === 'false') {
-      myProgramSwiper = new window.Swiper(programSlider, {
-        loop: true,
-        slideClass: 'programs__slide',
-        wrapperClass: 'programs__slider-wrapper',
+    if (programSlider) {
+      if (window.innerWidth <= 767 && programSlider.dataset.mobileProgram === 'false') {
+        myProgramSwiper = new window.Swiper(programSlider, {
+          loop: true,
+          slideClass: 'programs__slide',
+          wrapperClass: 'programs__slider-wrapper',
 
-        breakpoints: {
-          320: {
-            slidesPerView: 1.7,
-            slidesPerGroup: 1,
-          },
-          600: {
-            slidesPerView: 4,
-            slidesPerGroup: 1,
+          breakpoints: {
+            320: {
+              slidesPerView: 1.7,
+              slidesPerGroup: 1,
+            },
+            600: {
+              slidesPerView: 4,
+              slidesPerGroup: 1,
+            }
           }
+        });
+
+        programSlider.dataset.programSwiper = 'true';
+      }
+
+      if (window.innerWidth > 767) {
+        programSlider.dataset.mobileProgram = 'false';
+        if (programSlider.classList.contains('swiper-container-initialized')) {
+          myProgramSwiper.destroy();
         }
-      });
-
-      programSlider.dataset.programSwiper = 'true';
-    }
-
-    if (window.innerWidth > 767) {
-      programSlider.dataset.mobileProgram = 'false';
-      if (programSlider.classList.contains('swiper-container-initialized')) {
-        myProgramSwiper.destroy();
       }
     }
   }
 
   function enableLifeSlider() {
-    if (window.innerWidth <= 767 && lifeSlider.dataset.lifeSwiperOn === 'false') {
-      myLifeSwiper = new window.Swiper(lifeSlider, {
-        loop: true,
-        slideClass: 'life__slide',
-        wrapperClass: 'life__slider-wrapper',
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
+    if (lifeSlider) {
+      if (window.innerWidth <= 767 && lifeSlider.dataset.lifeSwiperOn === 'false') {
+        myLifeSwiper = new window.Swiper(lifeSlider, {
+          loop: true,
+          slideClass: 'life__slide',
+          wrapperClass: 'life__slider-wrapper',
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
           },
-          600: {
-            slidesPerView: 2,
-            slidesPerGroup: 1,
+
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 2,
+              slidesPerGroup: 1,
+            }
           }
+        });
+
+        lifeSlider.dataset.lifeSwiperOn = 'true';
+      }
+
+      if (window.innerWidth > 767) {
+        lifeSlider.dataset.lifeSwiperOn = 'false';
+        if (lifeSlider.classList.contains('swiper-container-initialized')) {
+          myLifeSwiper.destroy();
         }
-      });
-
-      lifeSlider.dataset.lifeSwiperOn = 'true';
-    }
-
-    if (window.innerWidth > 767) {
-      lifeSlider.dataset.lifeSwiperOn = 'false';
-      if (lifeSlider.classList.contains('swiper-container-initialized')) {
-        myLifeSwiper.destroy();
       }
     }
   }
 
   function enableReviewSlider() {
-    myReviewSwiper = new window.Swiper(reviewSlider, {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      pagination: {
-        el: '.reviews__swiper-pagination',
-        clickable: true,
-        type: 'fraction',
-      },
-      slideClass: 'reviews__slide',
-      wrapperClass: 'reviews__slider-wrapper',
+    if (reviewSlider) {
+      myReviewSwiper = new window.Swiper(reviewSlider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        pagination: {
+          el: '.reviews__swiper-pagination',
+          clickable: true,
+          type: 'fraction',
+        },
+        slideClass: 'reviews__slide',
+        wrapperClass: 'reviews__slider-wrapper',
 
-      navigation: {
-        nextEl: '.reviews__swiper-next',
-        prevEl: '.reviews__swiper-prev',
-      },
-    });
-
+        navigation: {
+          nextEl: '.reviews__swiper-next',
+          prevEl: '.reviews__swiper-prev',
+        },
+      });
+    }
     return myReviewSwiper;
   }
 
@@ -320,9 +326,11 @@
   var activeClass = 'questions__item--active';
   var questionsList = document.querySelector('.questions__list');
 
-  questionsList.addEventListener('click', function (evt) {
-    var questionItem = evt.target.parentElement;
-    questionItem.classList.toggle(activeClass);
-  });
+  if (questionsList) {
+    questionsList.addEventListener('click', function (evt) {
+      var questionItem = evt.target.parentElement;
+      questionItem.classList.toggle(activeClass);
+    });
+  }
 
 })();
