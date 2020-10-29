@@ -194,7 +194,8 @@
 
   function tabClickHandler(evt) {
     hideActiveTabs();
-    evt.target.parentElement.classList.add('program__item--active'); // выделяем выбранный пункт
+    var programItem = evt.target.parentElement;
+    programItem.classList.add('program__item--active'); // выделяем выбранный пункт
     var clickedTabAttribute = evt.target.getAttribute('data-tab-name');
     var activeTab = document.getElementsByClassName(clickedTabAttribute)[0];
     activeTab.classList.add('programs__tab--active'); // покзаываем содержимое таба
@@ -313,13 +314,15 @@
 
 })();
 
-// -------------------- аккордион частые вопосы --------------------
+// -------------------- аккордеон частые вопосы --------------------
 
-var questionBtns = document.querySelectorAll('.questions__question-btn');
-var activeClass = 'questions__item--active';
+(function () {
+  var activeClass = 'questions__item--active';
+  var questionsList = document.querySelector('.questions__list');
 
-questionBtns.forEach(function (item) {
-  item.addEventListener('click', function () {
-    item.parentElement.classList.toggle(activeClass);
+  questionsList.addEventListener('click', function (evt) {
+    var questionItem = evt.target.parentElement;
+    questionItem.classList.toggle(activeClass);
   });
-});
+
+})();
