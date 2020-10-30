@@ -685,7 +685,6 @@ img {
   width: 8px;
   height: 8px;
   display: inline-block;
-  vertical-align: middle;
   border-radius: 100%;
   background: #000;
   opacity: 0.2; }
@@ -725,7 +724,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  vertical-align: middle;
   -webkit-transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms top, 200ms -webkit-transform;
   transition: 200ms transform, 200ms top;
@@ -994,12 +992,6 @@ button.swiper-pagination-bullet {
   z-index: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
-
-.swiper-opacity-0 {
-  opacity: 0; }
-
-.swiper-opacity-1 {
-  opacity: 0; }
 
 .container {
   max-width: 1171px;
