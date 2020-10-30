@@ -110,9 +110,9 @@
     width: unset;
     opacity: 0.4;
     min-height: 48px;
-    padding-left: 52px;
+    padding-top: 16px;
     padding-right: 15px;
-    clip-path: none;
+    padding-left: 52px;
 
     &::before {
       top: 7px;
@@ -129,8 +129,7 @@
   .program__item--active .program__link,
   .program__item--active:hover .program__link,
   .program__item:active .program__link {
-
-    clip-path: none;
+    padding-top: 17px;
     background: $yellow-gradient;
     border-radius: 60px;
     opacity: 1;

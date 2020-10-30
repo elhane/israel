@@ -995,6 +995,12 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
+.swiper-opacity-0 {
+  opacity: 0; }
+
+.swiper-opacity-1 {
+  opacity: 0; }
+
 .container {
   max-width: 1171px;
   padding: 0 15px;
@@ -1950,10 +1956,9 @@ button.swiper-pagination-bullet {
     width: unset;
     opacity: 0.4;
     min-height: 48px;
-    padding-left: 52px;
+    padding-top: 16px;
     padding-right: 15px;
-    -webkit-clip-path: none;
-            clip-path: none; }
+    padding-left: 52px; }
     .program__link::before {
       top: 7px;
       left: 12px;
@@ -1964,8 +1969,7 @@ button.swiper-pagination-bullet {
   .program__item--active .program__link,
   .program__item--active:hover .program__link,
   .program__item:active .program__link {
-    -webkit-clip-path: none;
-            clip-path: none;
+    padding-top: 17px;
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     border-radius: 60px;
     opacity: 1; } }

@@ -1,6 +1,4 @@
 // -------------------- модальные окна --------------------
-'use strict';
-
 (function () {
   var callBtn = document.querySelector('.header__link--call');
   var callPopup = document.querySelector('.modal-overlay--call');
@@ -213,24 +211,27 @@
   var lifeSlider = document.querySelector('.life__slider');
   var programSlider = document.querySelector('.programs__slider');
   var reviewSlider = document.querySelector('.reviews__slider');
+  var MOBILE_WIDTH_MAX = 767;
+  var MOBILE_WIDTH_MIN = 320;
+  var MOBILE_WIDTH_MID = 600;
   var myLifeSwiper;
   var myProgramSwiper;
   var myReviewSwiper;
 
   function enableProgramSlider() {
     if (programSlider) {
-      if (window.innerWidth <= 767 && programSlider.dataset.mobileProgram === 'false') {
+      if (window.innerWidth <= MOBILE_WIDTH_MAX && programSlider.dataset.mobileProgram === 'false') {
         myProgramSwiper = new window.Swiper(programSlider, {
           loop: true,
           slideClass: 'programs__slide',
           wrapperClass: 'programs__slider-wrapper',
 
           breakpoints: {
-            320: {
+            [MOBILE_WIDTH_MIN]: {
               slidesPerView: 1.7,
               slidesPerGroup: 1,
             },
-            600: {
+            [MOBILE_WIDTH_MID]: {
               slidesPerView: 4,
               slidesPerGroup: 1,
             }
@@ -240,7 +241,7 @@
         programSlider.dataset.programSwiper = 'true';
       }
 
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > MOBILE_WIDTH_MAX) {
         programSlider.dataset.mobileProgram = 'false';
         if (programSlider.classList.contains('swiper-container-initialized')) {
           myProgramSwiper.destroy();
@@ -251,7 +252,7 @@
 
   function enableLifeSlider() {
     if (lifeSlider) {
-      if (window.innerWidth <= 767 && lifeSlider.dataset.lifeSwiperOn === 'false') {
+      if (window.innerWidth <= MOBILE_WIDTH_MAX && lifeSlider.dataset.lifeSwiperOn === 'false') {
         myLifeSwiper = new window.Swiper(lifeSlider, {
           loop: true,
           slideClass: 'life__slide',
@@ -262,10 +263,10 @@
           },
 
           breakpoints: {
-            320: {
+            [MOBILE_WIDTH_MIN]: {
               slidesPerView: 1,
             },
-            600: {
+            [MOBILE_WIDTH_MID]: {
               slidesPerView: 2,
               slidesPerGroup: 1,
             }
@@ -275,7 +276,7 @@
         lifeSlider.dataset.lifeSwiperOn = 'true';
       }
 
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > MOBILE_WIDTH_MAX) {
         lifeSlider.dataset.lifeSwiperOn = 'false';
         if (lifeSlider.classList.contains('swiper-container-initialized')) {
           myLifeSwiper.destroy();
