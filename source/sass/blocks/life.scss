@@ -225,3 +225,9 @@
     display: none;
   }
 }
+
+@media (min-width: 321px) and (max-width: $mobile-width) {
+  .life {
+    padding-bottom: 0;
+  }
+}

@@ -5,11 +5,11 @@
   var callPopupSubmitBtn = callPopup.querySelector('#order-call');
   var wantToGoForm = document.querySelector('.want-to-go__form');
   var wantToGoFormBtn = wantToGoForm.querySelector('#order-call-want-to-go');
-  var wantToGoFormInputs = wantToGoForm.querySelectorAll('input');
+  var wantToGoFormInputs = Array.from(wantToGoForm.querySelectorAll('input'));
   var wantToGoPhoneInput = wantToGoForm.querySelector('#want-to-go-user-phone');
   var feedbackForm = document.querySelector('.details__feedback-form');
   var feedbackFormBtn = feedbackForm.querySelector('#order-call-feedback');
-  var feedbackFormInputs = feedbackForm.querySelectorAll('input');
+  var feedbackFormInputs = Array.from(feedbackForm.querySelectorAll('input'));
   var feedbackNameInput = feedbackForm.querySelector('#feedback-user-name');
   var feedbackPhoneInput = feedbackForm.querySelector('#feedback-user-phone');
   var callPopupCloseBtn = callPopup.querySelector('.modal-call__btn-close');
@@ -17,18 +17,20 @@
   var callAcceptedPopupCloseBtn = callAcceptedPopup.querySelector('.modal-call__btn-close');
   var callAcceptedBtn = callAcceptedPopup.querySelector('.modal-call__btn--accepted');
   var callForm = callPopup.querySelector('form');
-  var callFormInputs = callForm.querySelectorAll('input');
+  var callFormInputs = Array.from(callForm.querySelectorAll('input'));
   var nameInput = callPopup.querySelector('#user-name');
   var phoneInput = callPopup.querySelector('#user-phone');
   var userAgreeInput = callPopup.querySelector('#user-agree');
   var storageName = localStorage.getItem('nameInput');
   var storagePhone = localStorage.getItem('phoneInput');
+  var body = document.querySelector('body');
 
   function openPopup(item, evt) {
     if (item.classList.contains('modal-overlay--closed')) {
       evt.preventDefault();
       item.classList.remove('modal-overlay--closed');
       item.classList.add('modal-overlay--opened');
+      body.classList.add('overflow-hidden');
     }
   }
 
@@ -36,6 +38,7 @@
     if (item.classList.contains('modal-overlay--opened')) {
       item.classList.remove('modal-overlay--opened');
       item.classList.add('modal-overlay--closed');
+      body.classList.remove('overflow-hidden');
     }
   }
 
@@ -52,11 +55,6 @@
     });
   }
 
-  // проверка инпутов CallForm
-  function onCallFormInput() {
-    validateFormInputs(callFormInputs);
-  }
-
   // проверка инпутов FeedbackForm
   function onFeedbackFormInput() {
     validateFormInputs(feedbackFormInputs);
@@ -69,9 +67,9 @@
 
   // проверка формы CallForm
   function onCallFormSubmit(evt) {
-    if (!nameInput.value || !phoneInput.value || !userAgreeInput.value) {
-      evt.preventDefault();
-    } else {
+    validateFormInputs(callFormInputs);
+
+    if (nameInput.validity.valid && phoneInput.validity.valid && userAgreeInput.validity.valid) {
       openPopup(callAcceptedPopup, evt);
     }
   }
@@ -80,7 +78,6 @@
   function onCallBtnClick(evt) {
     openPopup(callPopup, evt);
     nameInput.focus();
-    callForm.addEventListener('input', onCallFormInput);
 
     if (storageName && storagePhone) {
       nameInput.value = storageName;
@@ -95,8 +92,6 @@
 
   // открытие попапа по клику на кнопку перезвоните мне / хочу поехать
   function onWantToGoFormBtnClick(evt) {
-    evt.preventDefault();
-
     if (wantToGoPhoneInput.validity.valid) {
       openPopup(callAcceptedPopup, evt);
     }
@@ -104,8 +99,6 @@
 
   // открытие попапа по клику на кнопку перезвоните мне / узнать подробности
   function onFeedbackFormBtnClick(evt) {
-    evt.preventDefault();
-
     if (feedbackNameInput.validity.valid && feedbackPhoneInput.validity.valid) {
       openPopup(callAcceptedPopup, evt);
     }
@@ -159,7 +152,7 @@
   // клик по крестику попапа заявка принята
   callAcceptedPopupCloseBtn.addEventListener('click', onCallAcceptedPopupCloseBtnClick);
 
-  // клик по кнопке перезвонить мне
+  // клик по кнопке перезвонить мне в попапе
   callPopupSubmitBtn.addEventListener('click', onCallFormSubmit);
 
   // клик по кнопке понятно
@@ -175,31 +168,46 @@
 
 (function () {
   var programsTabs = document.querySelector('#tab-nav');
+  var itemActiveClass = 'program__item--active';
+  var tabActiveClass = 'programs__tab--active';
 
   function hideActiveTabs() {
-    var activeButtons = document.querySelectorAll('.program__item--active');
-    var activeTabs = document.querySelectorAll('.programs__tab--active');
+    var programBtns = Array.from(document.querySelectorAll('.program__link'));
+    var programTabs = Array.from(document.querySelectorAll('.programs__tab'));
 
-    activeButtons.forEach(function (tab) {
-      tab.classList.remove('program__item--active');
+    programBtns.forEach(function (btn) {
+      btn.parentElement.classList.remove(itemActiveClass);
     });
 
-    activeTabs.forEach(function (tab) {
-      tab.classList.remove('programs__tab--active');
+    programTabs.forEach(function (tab) {
+      tab.classList.remove(tabActiveClass);
     });
   }
 
-  function tabClickHandler(evt) {
+  function toggleTabs(evt) {
     hideActiveTabs();
     var programItem = evt.target.parentElement;
-    programItem.classList.add('program__item--active'); // выделяем выбранный пункт
+    programItem.classList.add(itemActiveClass); // выделяем выбранный пункт
     var clickedTabAttribute = evt.target.getAttribute('data-tab-name');
     var activeTab = document.getElementsByClassName(clickedTabAttribute)[0];
-    activeTab.classList.add('programs__tab--active'); // покзаываем содержимое таба
+    activeTab.classList.add(tabActiveClass); // покзаываем содержимое таба
+  }
+
+  function onTabEnterPress(evt) {
+    if (evt.keyCode === 13) {
+      if (evt.target.classList.contains('program__link')) {
+        toggleTabs(evt);
+      }
+    }
+  }
+
+  function onTabClick(evt) {
+    toggleTabs(evt);
   }
 
   if (programsTabs) {
-    programsTabs.addEventListener('click', tabClickHandler);
+    programsTabs.addEventListener('click', onTabClick);
+    window.addEventListener('keydown', onTabEnterPress);
   }
 
 })();
@@ -211,38 +219,38 @@
   var lifeSlider = document.querySelector('.life__slider');
   var programSlider = document.querySelector('.programs__slider');
   var reviewSlider = document.querySelector('.reviews__slider');
-  var MOBILE_WIDTH_MIN = 320;
-  var MOBILE_WIDTH_MID = 600;
   var MOBILE_WIDTH_MAX = 767;
   var myLifeSwiper;
   var myProgramSwiper;
   var myReviewSwiper;
+  var TAB_0 = 0;
+  var TAB_MINUS_1 = -1;
 
   function enableProgramSlider() {
     if (programSlider) {
-      if (window.innerWidth <= MOBILE_WIDTH_MAX && programSlider.dataset.mobileProgram === 'false') {
+      if (window.innerWidth <= MOBILE_WIDTH_MAX && programSlider.dataset.programSwiperOn === 'false') {
         myProgramSwiper = new window.Swiper(programSlider, {
           loop: true,
           slideClass: 'programs__slide',
           wrapperClass: 'programs__slider-wrapper',
 
           breakpoints: {
-            [MOBILE_WIDTH_MIN]: {
+            320: {
               slidesPerView: 1.7,
               slidesPerGroup: 1,
             },
-            [MOBILE_WIDTH_MID]: {
+            600: {
               slidesPerView: 4,
               slidesPerGroup: 1,
             }
           }
         });
 
-        programSlider.dataset.programSwiper = 'true';
+        programSlider.dataset.programSwiperOn = 'true';
       }
 
       if (window.innerWidth > MOBILE_WIDTH_MAX) {
-        programSlider.dataset.mobileProgram = 'false';
+        programSlider.dataset.programSwiperOn = 'false';
         if (programSlider.classList.contains('swiper-container-initialized')) {
           myProgramSwiper.destroy();
         }
@@ -257,19 +265,19 @@
           loop: true,
           slideClass: 'life__slide',
           wrapperClass: 'life__slider-wrapper',
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
           },
 
           breakpoints: {
-            [MOBILE_WIDTH_MIN]: {
+            320: {
               slidesPerView: 1,
             },
-            [MOBILE_WIDTH_MID]: {
-              slidesPerView: 2,
-              slidesPerGroup: 1,
-            }
           }
         });
 
@@ -291,6 +299,10 @@
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
         pagination: {
           el: '.reviews__swiper-pagination',
           clickable: true,
@@ -318,6 +330,42 @@
   }
 
   window.addEventListener('resize', enableSwipers);
+
+  myReviewSwiper.on('slideChangeTransitionStart', onSlideChange);
+
+  function onSlideChange() {
+    cleanAllTabIndex();
+    toggleTabIndex();
+  }
+
+  toggleTabIndex();
+
+  function cleanAllTabIndex() {
+    var reviewsSlides = Array.from(reviewSlider.querySelectorAll('.reviews__item'));
+
+    reviewsSlides.forEach(function (slide) {
+      slide.tabIndex = TAB_MINUS_1;
+
+      slide.querySelector('.reviews__link').tabIndex = TAB_MINUS_1;
+
+      var socials = Array.from(slide.querySelectorAll('.reviews__social-link'));
+      socials.forEach(function (btn) {
+        btn.tabIndex = TAB_MINUS_1;
+      });
+    });
+  }
+
+  function toggleTabIndex() {
+    var activeSlide = reviewSlider.querySelector('.swiper-slide-active');
+    var activeSlideSocials = Array.from(activeSlide.querySelectorAll('.reviews__social-link'));
+    var activeSlideLink = activeSlide.querySelector('.reviews__link');
+
+    activeSlide.tabIndex = TAB_0;
+    activeSlideLink.tabIndex = TAB_0;
+    activeSlideSocials.forEach(function (socialBtn) {
+      socialBtn.tabIndex = TAB_0;
+    });
+  }
 
 })();
 

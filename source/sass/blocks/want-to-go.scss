@@ -97,7 +97,7 @@
 
   .want-to-go p {
     margin-left: 0;
-    max-width: unset;
+    max-width: 100%;
 
     @include text-big-mobile;
   }

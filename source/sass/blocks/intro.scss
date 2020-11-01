@@ -76,6 +76,16 @@
   fill: $yellow;
 }
 
+@media (max-width: 1080px) {
+  .intro {
+    min-height: 661px;
+  }
+
+  .intro__wrapper {
+    margin-top: 330px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .intro {
     min-height: 600px;

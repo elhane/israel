@@ -105,8 +105,14 @@
   }
 }
 
-@media (max-width: $mobile-width) {
+@media (min-width: 321px) and (max-width: $mobile-width) {
+  .promo {
+    padding-top: 106px;
+    padding-bottom: 98px;
+  }
+
   .promo__wrapper {
     padding-top: 0;
+    align-items: flex-end;
   }
 }

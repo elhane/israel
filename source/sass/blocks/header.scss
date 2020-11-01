@@ -59,19 +59,6 @@
 .header__logo {
   display: block;
   padding-right: 28px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    outline: dashed 2px rgba(255, 195, 65, 0.5);
-    outline-offset: 3px;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 }
 
 @media (max-width: $mobile-width) {
