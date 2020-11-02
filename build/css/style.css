@@ -1995,7 +1995,7 @@ button.swiper-pagination-bullet {
     background-size: contain; }
     @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .want-to-go::before {
-        background-image: url("/img/backpack@2x.png"); } }
+        background-image: url("../img/backpack@2x.png"); } }
 
 .want-to-go h2 {
   margin-left: 97px;
