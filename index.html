@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Проект Маса, стажировки в Израиль для студентов">
+  <title>Стажировки в Израиле</title>
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/fira-sans-400.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/fira-sans-500.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/fira-sans-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/fira-sans-700.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/raleway-800.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/raleway-900.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M15.538 5.187H17.4V1.943c-.321-.044-1.426-.143-2.713-.143-2.685 0-4.524 1.689-4.524 4.793V9.45H7.2v3.626h2.963V22.2h3.633v-9.123h2.843l.45-3.626h-3.294V6.953c0-1.049.283-1.766 1.743-1.766z"></path></symbol><symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 8.4A3.604 3.604 0 008.4 12c0 1.985 1.615 3.6 3.6 3.6s3.6-1.615 3.6-3.6-1.615-3.6-3.6-3.6z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M2.4 17.61V6.39A3.99 3.99 0 016.39 2.4h11.22a3.99 3.99 0 013.99 3.99v11.22a3.99 3.99 0 01-3.99 3.99H6.39a3.99 3.99 0 01-3.99-3.99zm4.16-7.644a5.823 5.823 0 007.474 7.474 5.508 5.508 0 003.406-3.406A5.823 5.823 0 009.966 6.56 5.508 5.508 0 006.56 9.966zM18 6.6a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"></path></symbol><symbol id="icon-play" viewBox="0 0 15 19"><path d="M15 9.5L0 19V0l15 9.5z"></path></symbol><symbol id="icon-scroll"><path class="st0" d="M37.5 76h1v55.5h-1zm.5-11c-14.9 0-27-12.1-27-27s12.1-27 27-27 27 12.1 27 27-12.1 27-27 27zm0-53c-14.3 0-26 11.7-26 26s11.7 26 26 26 26-11.7 26-26-11.7-26-26-26zm1.9 64v-1c1.3-.1 2.6-.2 3.9-.4l.2 1c-1.4.2-2.8.3-4.1.4zm-4.1-.1c-1.3-.1-2.7-.2-4-.4l.2-1c1.3.2 2.6.4 3.9.4l-.1 1zm12.1-1.2l-.3-1c1.3-.3 2.5-.8 3.7-1.2l.4.9c-1.2.5-2.5 1-3.8 1.3zm-20.1-.1c-1.3-.4-2.6-.8-3.8-1.3l.4-.9c1.2.5 2.5.9 3.7 1.3l-.3.9zm27.6-2.8l-.4-.9c1.2-.6 2.3-1.3 3.4-2l.6.8c-1.2.8-2.4 1.5-3.6 2.1zm-35.1-.2c-1.2-.6-2.4-1.3-3.5-2.1l.6-.8c1.1.7 2.2 1.4 3.4 2l-.5.9zm41.9-4.3l-.6-.8c1-.8 2-1.7 2.9-2.7l.7.7c-1 1.1-2 2-3 2.8zm-48.6-.2c-1-.9-2-1.8-3-2.8l.7-.7c.9.9 1.9 1.8 2.9 2.7l-.6.8zm54.2-5.5l-.8-.7c.8-1 1.6-2.1 2.3-3.2l.8.5c-.7 1.2-1.4 2.3-2.3 3.4zM8 61.3c-.8-1.1-1.6-2.2-2.3-3.3l.9-.5c.7 1.1 1.4 2.2 2.3 3.2l-.9.6zm64.1-6.6l-.9-.4c.6-1.2 1.1-2.4 1.5-3.6l.9.3c-.3 1.2-.9 2.5-1.5 3.7zm-68.4-.3c-.6-1.2-1.1-2.5-1.6-3.7l.9-.3c.4 1.2.9 2.5 1.5 3.6l-.8.4zm71.2-7.3l-1-.2c.3-1.3.6-2.6.7-3.9l1 .1c-.1 1.4-.4 2.7-.7 4zM1 46.8c-.3-1.3-.6-2.6-.7-4l1-.1c.2 1.3.4 2.6.7 3.9l-1 .2zm75-7.7h-1V38c0-1 0-1.9-.1-2.9l1-.1c.1 1 .1 2 .1 3v1.1zm-76-.3V38c0-1.1 0-2.2.1-3.3l1 .1C1 35.9 1 36.9 1 38v.8H0zm74.4-7.6c-.2-1.3-.5-2.6-.9-3.8l1-.3c.4 1.3.7 2.6 1 3.9l-1.1.2zm-72.7-.3l-1-.2c.3-1.3.6-2.6 1-3.9l1 .3c-.5 1.2-.8 2.5-1 3.8zm70.4-7.2c-.5-1.2-1.1-2.4-1.7-3.5l.9-.5c.7 1.2 1.2 2.4 1.8 3.6l-1 .4zM4 23.4l-.9-.4c.5-1.2 1.1-2.5 1.8-3.6l.9.5C5.1 21 4.5 22.2 4 23.4zm64.3-6.6c-.8-1.1-1.6-2.1-2.4-3.1l.8-.7c.9 1 1.7 2.1 2.5 3.2l-.9.6zm-60.4-.3L7 16c.8-1.1 1.6-2.2 2.5-3.2l.7.7c-.8.9-1.6 2-2.3 3zm55.2-5.7c-1-.9-2-1.7-3-2.5l.6-.8c1.1.8 2.1 1.7 3.1 2.6l-.7.7zm-50-.2l-.7-.7c1-.9 2-1.8 3.1-2.6l.6.8c-1 .8-2 1.7-3 2.5zm43.7-4.5c-1.1-.7-2.3-1.3-3.5-1.8l.4-.9c1.2.6 2.4 1.2 3.6 1.9l-.5.8zM19.4 6l-.5-.9c1.2-.7 2.4-1.3 3.6-1.8l.5.9c-1.2.5-2.4 1.1-3.6 1.8zm30.2-3.1c-1.2-.4-2.5-.8-3.8-1l.2-1c1.3.3 2.6.6 3.9 1.1l-.3.9zm-23-.1l-.3-1c1.3-.4 2.6-.8 3.9-1l.2 1c-1.2.2-2.5.6-3.8 1zm15.3-1.6c-2.5-.3-5.1-.3-7.6 0l-.1-1c2.6-.3 5.2-.2 7.8 0l-.1 1z"></path></symbol><symbol id="icon-telegram"><path d="M9.633 14.863l-.364 5.026c.52 0 .746-.22 1.016-.483l2.441-2.291 5.059 3.637c.927.508 1.581.24 1.831-.838l3.32-15.275h.001c.295-1.347-.495-1.874-1.4-1.543L2.022 10.432c-1.332.507-1.311 1.236-.226 1.566l4.99 1.524 11.59-7.12c.545-.354 1.04-.158.633.197l-9.375 8.264z"></path></symbol><symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M23.077 5.13a9.47 9.47 0 01-2.617.718 4.516 4.516 0 001.998-2.51 9.076 9.076 0 01-2.88 1.1 4.54 4.54 0 00-7.856 3.106c0 .359.03.705.105 1.035C8.05 8.394 4.71 6.585 2.466 3.828a4.573 4.573 0 00-.622 2.296c0 1.573.81 2.967 2.017 3.774a4.485 4.485 0 01-2.052-.56v.05a4.563 4.563 0 003.639 4.463c-.37.101-.773.15-1.19.15-.291 0-.585-.017-.86-.078.588 1.799 2.258 3.121 4.243 3.164a9.125 9.125 0 01-5.63 1.937c-.373 0-.73-.017-1.088-.062A12.787 12.787 0 007.89 21c8.358 0 12.927-6.923 12.927-12.924 0-.2-.007-.395-.017-.587a9.061 9.061 0 002.277-2.358z"></path></symbol><symbol id="icon-whatsapp"><path d="M12.002 2h-.005C6.485 2 2 6.485 2 12c0 2.188.705 4.215 1.904 5.861l-1.246 3.715L6.5 20.347A9.913 9.913 0 0012.002 22C17.517 22 22 17.514 22 12S17.516 2 12.002 2zm5.82 14.121c-.242.681-1.2 1.247-1.963 1.412-.523.11-1.205.2-3.503-.753-2.938-1.218-4.831-4.204-4.978-4.398-.142-.193-1.188-1.58-1.188-3.016 0-1.435.729-2.133 1.022-2.433.242-.247.64-.36 1.023-.36.124 0 .235.007.335.012.294.013.441.03.635.494.241.581.829 2.016.899 2.163.071.148.142.348.042.542-.094.2-.176.288-.324.458-.147.17-.287.3-.434.483-.136.159-.288.329-.118.623.17.287.758 1.246 1.623 2.016 1.116.993 2.02 1.311 2.345 1.446.24.1.528.076.705-.111.223-.242.5-.642.78-1.035.2-.283.453-.318.718-.218.27.094 1.699.8 1.993.947.293.147.487.217.558.34.07.124.07.706-.17 1.388z"></path></symbol></svg>
+  </div>
+
+  <header class="header container">
+    <ul class="header__list">
+      <li class="header__list-item">
+        <a class="header__link header__link--phone" href="tel:97226216581" aria-label="Номер телефона">+ (972) 2 – 621 – 6581</a>
+      </li>
+      <li class="header__list-item header__list-item--logo">
+        <a class="header__logo">
+          <img src="img/logo@1x.png" width="137" height="48" srcset="img/logo@1x.png 1x, img/logo@2x.png 2x" alt="логотип проекта Маса">
+        </a>
+      </li>
+      <li class="header__list-item">
+        <a class="header__link header__link--call" href="#">заказать звонок</a>
+      </li>
+    </ul>
+  </header>
+
+  <section class="intro">
+    <h1 class="visually-hidden">Проект "Маса": Cтажировки в Израиле</h1>
+    <div class="intro__wrapper">
+      <p>Учёба, путешествие и карьера для&#160;еврейской молодёжи</p>
+      <a class="intro__scroll-btn" href="#description" aria-label="скролл вниз">
+        <svg class="intro__scroll-svg" width="76" height="131" focusable="false">
+          <use xlink:href="#icon-scroll"></use>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="description" id="description">
+    <div class="container">
+      <h2>О программе</h2>
+      <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&#160;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+    </div>
+    <div class="description__video-wrapper">
+      <div class="description__video">
+        <button class="description__video-btn" aria-label="включить видео">
+          <svg class="description__video-btn-svg" focusable="false" width="15" height="19">
+            <use xlink:href="#icon-play"></use>
+          </svg>
+        </button>
+        <picture>
+          <!-- 1х: 870px; 2x: 1740px -->
+          <source media="(min-width: 1024px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x" type="image/webp">
+
+          <!-- 1х: 320px; 2x: 640px -->
+          <source media="(max-width: 767px)" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x" type="image/webp">
+
+          <!-- 1х: 870px; 2x: 1740px -->
+          <img src="img/video-desktop@1x.png" srcset="img/video-desktop@2x.png 2x" width="870" height="460" loading="lazy" alt="Превью видео">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="programs">
+    <div class="container">
+      <h2>Программы</h2>
+      <div class="programs__wrapper">
+        <div class="programs__slider" data-program-swiper-on="false">
+          <ul class="programs__list program programs__slider-wrapper" id="tab-nav" aria-label="список програм">
+            <li class="program__item programs__slide">
+              <a class="program__link program__link--common" data-tab-name="tab-common" tabindex="0">Общие</a>
+            </li>
+            <li class="program__item programs__slide program__item--active">
+              <a class="program__link program__link--academic" data-tab-name="tab-academic" tabindex="0">Академические</a>
+            </li>
+            <li class="program__item programs__slide">
+              <a class="program__link program__link--internship" data-tab-name="tab-internship" tabindex="0">Стажировки</a>
+            </li>
+            <li class="program__item programs__slide">
+              <a class="program__link program__link--volunteerism" data-tab-name="tab-volunteerism" tabindex="0">Волонтёрство</a>
+            </li>
+            <li class="program__item programs__slide">
+              <a class="program__link program__link--religious" data-tab-name="tab-religious" tabindex="0">Религиозные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="programs-content">
+          <div class="programs__tab tab-common">
+            <h3>Общие</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam dolore esse nemo ea accusamus rerum vitae earum officiis culpa. Maxime facilis obcaecati quidem repellat nisi ipsum natus dolor quasi asperiores. Doloribus dignissimos beatae a nesciunt perferendis. Vero omnis tempore voluptatem, maxime dolorem eligendi vel quod culpa voluptatum cumque modi error itaque aliquid eveniet saepe officia vitae minus corporis delectus! Similique cum, ipsa nisi rerum tenetur amet necessitatibus. Ab, sequi nemo modi ipsa, laborum magnam quas sit maiores quibusdam velit aliquid.</p>
+          </div>
+          <div class="programs__tab programs__tab--active tab-academic">
+            <h3>Академические</h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&#160;идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и&#160;делового администрирования или искусства? Здесь, в Израиле, Вы сможете&#160;изучить&#160;все это в удивительной университетской среде.</p>
+          </div>
+          <div class="programs__tab tab-internship">
+            <h3>Стажировки</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ea asperiores totam veniam numquam impedit harum voluptas culpa facere natus voluptate aut eum laborum, adipisci nam assumenda cumque reiciendis, quaerat nesciunt labore quam velit iure illum? Aspernatur omnis ad doloremque odio eaque eum fugiat saepe, perspiciatis iusto doloribus possimus, quibusdam fugit molestias praesentium accusamus est! Aspernatur consequuntur molestiae soluta, dignissimos at porro sequi deserunt doloremque obcaecati quibusdam beatae ad omnis.</p>
+          </div>
+          <div class="programs__tab tab-volunteerism">
+            <h3>Волонтёрство</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia itaque, earum aut assumenda eveniet modi beatae, vel nobis veniam cumque aspernatur! Saepe, repellendus! Quis cum quasi unde recusandae ipsa beatae voluptatem placeat sint! Natus, reiciendis quae tempora quasi velit doloremque animi officiis nobis reprehenderit? Ducimus maxime recusandae dolores eos ipsum, perspiciatis obcaecati placeat aliquam illo, sapiente aut. Placeat officiis quas illo debitis quidem illum recusandae saepe dignissimos nihil, nesciunt nostrum temporibus a corporis sunt amet?</p>
+          </div>
+          <div class="programs__tab tab-religious">
+            <h3>Религиозные</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis iusto repellat, vel, quae nesciunt alias aut adipisci ut fugiat nam tempore, autem maxime nulla quis eos dicta natus exercitationem ipsum totam laboriosam quo laborum quas. Ad ipsa iure ullam! Quibusdam maiores quae tenetur perferendis ratione, quisquam officia et nihil eaque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="want-to-go">
+    <div class="container">
+      <h2>Хочу поехать!</h2>
+      <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+      <form class="want-to-go__form form form--want-to-go" action="https://echo.htmlacademy.ru/courses" method="post">
+        <div class="form__field form__field--text form__field--want-to-go">
+          <input type="tel" name="user-phone" id="want-to-go-user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
+          <label class="visually-hidden" for="want-to-go-user-phone">Номер телефона</label>
+        </div>
+        <button type="submit" id="order-call-want-to-go">перезвоните мне</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="how-to-go">
+    <div class="container how-to-go__wrapper">
+      <div class="how-to-go__inner">
+        <h2>Как поехать</h2>
+        <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в&#160;вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+        <h3>Чтобы иметь возможность получить грант на обучение от&#160;4200 до&#160;8400$, вы должны:</h3>
+        <ul class="how-to-go__list">
+          <li class="how-to-go__list-item">Быть в возрасте от 16 до 30 лет</li>
+          <li class="how-to-go__list-item">Иметь оконченное среднее образование</li>
+          <li class="how-to-go__list-item">Иметь документально подтверждённые еврейские корни и&#160;пройти консульскую проверку</li>
+          <li class="how-to-go__list-item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+        </ul>
+        <span>Если вы не подходите по этим правилам, вы всё равно можете
+          принять участие в программе «Маса», оплатив её полную стоимость.</span>
+      </div>
+      </div>
+  </section>
+
+  <section class="life">
+    <div class="container">
+      <h2>Жизнь в&#160;израиле</h2>
+      <p>Помимо учёбы, в рамках программе у&#160;вас будет возможность путешествовать по стране и познакомиться&#160;с&#160;богатой культурно&#8209;исторической жизнью Израиля&#160;и&#160;его&#160;жителей.</p>
+      <div class="life__swiper-container life__slider" data-life-swiper-on="false">
+        <ul class="life__list life__slider-wrapper">
+          <li class="life__item life__item--history life__slide">
+            <h4>Экскурсии по Израилю и&#160;знакомство с его историей</h4>
+          </li>
+          <li class="life__item life__item--hebrew life__slide">
+            <h4>Изучение иврита</h4>
+          </li>
+          <li class="life__item life__item--study life__slide">
+            <h4>Обучение современным навыкам и профессиям</h4>
+          </li>
+          <li class="life__item life__item--creative life__slide">
+            <h4>Совместные творческие проекты с&#160;израильской молодёжью
+            </h4>
+          </li>
+          <li class="life__item life__item--leader life__slide">
+            <h4>Развитие лидерства</h4>
+          </li>
+        </ul>
+        <div class="swiper-pagination life__slider-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="container promo__wrapper">
+      <div class="promo__inner">
+        <h2>#masaisrael</h2>
+        <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о&#160;жизни, учёбе и путешествиях в&#160;Израиле.</p>
+        <a class="button promo__button" href="#">
+          <svg class="promo__svg" width="24" height="24" focusable="false">
+            <use xlink:href="#icon-instagram"></use>
+          </svg>
+          <span>смотреть фото</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="questions">
+    <div class="container questions__wrapper">
+      <div class="questions__inner">
+        <h2>частые вопросы</h2>
+        <ul class="questions__list">
+          <li class="questions__item">
+            <button class="questions__question-btn">Кто организатор? Какие сроки у программы?</button>
+            <div class="questions__answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque accusamus asperiores iusto ex incidunt natus vitae laboriosam.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <button class="questions__question-btn">Что такое грант на обучение?</button>
+            <div class="questions__answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque accusamus asperiores iusto ex incidunt natus vitae laboriosam.</p>
+            </div>
+          </li>
+          <li class="questions__item questions__item--active">
+            <button class="questions__question-btn">Как определяется стоимость программы?</button>
+            <div class="questions__answer">
+              <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <button class="questions__question-btn">Что такое грант на обучение?</button>
+            <div class="questions__answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque accusamus asperiores iusto ex incidunt natus vitae laboriosam.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <button class="questions__question-btn questions__question-btn--indent">Признаётся ли учеба в рамках проекта для дальнейшего обучения?</button>
+            <div class="questions__answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque accusamus asperiores iusto ex incidunt natus vitae laboriosam.</p>
+            </div>
+          </li>
+          <li class="questions__item">
+            <button class="questions__question-btn questions__question-btn--indent">Как выглдядит полный процесс регистрации на&#160;программу «Маса»?</button>
+            <div class="questions__answer">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, doloremque accusamus asperiores iusto ex incidunt natus vitae laboriosam.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+      <div class="reviews__slider">
+        <ul class="reviews__list reviews__slider-wrapper">
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Ольга Михайлова</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, февраль-сентябрь 2017</dd>
+              </dl>
+              <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+              <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review3-desktop@1x.webp 1x, img/review3-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review3-mobile@1x.webp 1x, img/review3-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review3-desktop@1x.png" srcset="img/review3-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Анастасия Соколова</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, декабрь-июль 2018</dd>
+              </dl>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores excepturi officia quisquam iure, deleniti libero natus, nulla dolore nostrum ad nisi in illo cumque optio laborum repellendus quidem molestiae magni?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur sequi est nobis, qui ratione. Magni ut inventore ratione repellat facere, vero temporibus, explicabo impedit rem reprehenderit saepe ad! Nesciunt sunt iste explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review2-desktop@1x.webp 1x, img/review2-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review2-mobile@1x.webp 1x, img/review2-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review2-desktop@1x.png" srcset="img/review2-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Михаил и Екатерина Фроловы</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, октябрь-май 2018</dd>
+              </dl>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod nisi culpa veritatis assumenda pariatur explicabo aperiam eveniet necessitatibus? Quia totam tempora delectus reprehenderit praesentium!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil possimus unde eius sequi omnis. Dolorum at, accusantium itaque quidem nobis, fugiat iste earum nam saepe ad adipisci cumque voluptate quibusdam sint ipsam placeat sapiente possimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review-desktop@1x.webp 1x, img/review-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review-mobile@1x.webp 1x, img/review-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review-desktop@1x.png" srcset="img/review-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Ольга Михайлова</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, февраль-сентябрь 2017</dd>
+              </dl>
+              <p>Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+              <p>С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review2-desktop@1x.webp 1x, img/review2-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review2-mobile@1x.webp 1x, img/review2-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review2-desktop@1x.png" srcset="img/review2-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Михаил и Екатерина Фроловы</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, октябрь-май 2018</dd>
+              </dl>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quod nisi culpa veritatis assumenda pariatur explicabo aperiam eveniet necessitatibus? Quia totam tempora delectus reprehenderit praesentium!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil possimus unde eius sequi omnis. Dolorum at, accusantium itaque quidem nobis, fugiat iste earum nam saepe ad adipisci cumque voluptate quibusdam sint ipsam placeat sapiente possimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="reviews__item reviews__slide">
+            <div class="reviews__imgage-wrapper">
+              <picture>
+                <!-- 1х: 364px; 2x: 728px  -->
+                <source media="(min-width: 1024px)" srcset="img/review3-desktop@1x.webp 1x, img/review3-desktop@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 240px; 2x: 480px -->
+                <source media="(max-width: 767px)" srcset="img/review3-mobile@1x.webp 1x, img/review3-mobile@2x.webp 2x" type="image/webp">
+
+                <!-- 1х: 364px; 2x: 728px -->
+                <img src="img/review3-desktop@1x.png" srcset="img/review3-desktop@2x.png 2x" width="364" height="480" loading="lazy" alt="фото автора отзыва">
+              </picture>
+            </div>
+            <div class="reviews__slide-inner">
+              <h3>Анастасия Соколова</h3>
+              <dl>
+                <dt>Программа:</dt>
+                <dd>Арт-Тель, декабрь-июль 2018</dd>
+              </dl>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores excepturi officia quisquam iure, deleniti libero natus, nulla dolore nostrum ad nisi in illo cumque optio laborum repellendus quidem molestiae magni?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius tenetur sequi est nobis, qui ratione. Magni ut inventore ratione repellat facere, vero temporibus, explicabo impedit rem reprehenderit saepe ad! Nesciunt sunt iste explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+              <a class="reviews__link" href="#" tabindex="-1">Читать подробнее</a>
+              <ul class="reviews__social social">
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Фейсбук" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Твиттер" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="reviews__social-item social__item">
+                  <a href="#" class="reviews__social-link social__link" aria-label="Инстаграм" tabindex="-1">
+                    <svg class="reviews__social-svg social__svg" focusable="false" width="24" height="24">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div class="reviews__swiper-controls">
+          <div class="reviews__swiper-pagination"></div>
+          <div class="reviews__slider-buttons">
+            <button class="reviews__swiper-prev" aria-label="предыдущий слайд" tabindex="0"></button>
+            <button class="reviews__swiper-next" aria-label="следующий слайд" tabindex="0"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="details__container">
+      <div class="details__contacts-wrapper">
+        <div class="details__inner">
+          <h2>Узнать подробности</h2>
+          <div class="details__city">
+            <p>Ваш город:</p>
+            <a class="details__city-link" href="#">новосибирск</a>
+          </div>
+          <div class="details__curator">
+            <div class="details__curator__top">
+              <div class="details__curator-img-wrapper">
+                <picture>
+                  <!-- 1х: 112px; 2x: 224px -->
+                  <source srcset="img/curator@1x.webp 1x, img/curator@2x.webp 2x" type="image/webp">
+
+                  <!-- 1х: 112px; 2x: 224px -->
+                  <img src="img/curator@1x.png" srcset="img/curator@2x.png 2x" width="112" height="112" loading="lazy" alt="фото автора отзыва">
+                </picture>
+              </div>
+              <div class="details__curator-contacts">
+                <dl>
+                  <dt>Ваш куратор:</dt>
+                  <dd>Анна Горелик</dd>
+                </dl>
+                <p>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+                <ul class="details__social social">
+                  <li class="details__social-item social__item">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
+                      <svg class="details__social-svg social__svg" focusable="false" width="24" height="24">
+                        <use xlink:href="#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="details__social-item social__item">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
+                      <svg class="details__social-svg social__svg" focusable="false" width="24" height="24">
+                        <use xlink:href="#icon-whatsapp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="details__social-item social__item">
+                    <a href="#" class="details__social-link social__link" aria-label="Фейсбук">
+                      <svg class="details__social-svg social__svg" focusable="false" width="24" height="24">
+                        <use xlink:href="#icon-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>Куратор является опытным специалистом агентства Сохнут и&#160;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&#160;подробнее о программах и выберите свою !</p>
+          </div>
+        </div>
+        <div class="details__map-wrapper">
+          <picture>
+            <!-- 1х: 702px; 2x: 1404px -->
+            <source srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" type="image/webp">
+
+            <!-- 1х: 702px; 2x: 1404px -->
+            <img src="img/map-desktop@1x.png" srcset="img/map-desktop@2x.png 2x" width="702" height="448" loading="lazy" alt="фото автора отзыва">
+          </picture>
+        </div>
+      </div>
+      <div class="details__feedback-wrapper">
+        <div class="details__feedback-text">
+          <h3>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</h3>
+          <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+        </div>
+        <form class="details__feedback-form form form--feedback" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="form__field form__field--text form__field--feedback">
+            <input type="text" name="user-name" id="feedback-user-name" placeholder="имя" pattern="^[А-Яа-яЁё\s]+$" required="">
+            <label class="visually-hidden" for="feedback-user-name">Имя</label>
+          </div>
+          <div class="form__field form__field--text form__field--phone form__field--feedback">
+            <input type="tel" name="user-phone" id="feedback-user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
+            <label class="visually-hidden" for="feedback-user-phone">Номер телефона</label>
+          </div>
+          <button type="submit" id="order-call-feedback">перезвоните мне</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <a class="footer__logo">
+        <img src="img/logo-footer@1x.png" width="85" height="27" srcset="img/logo-footer@1x.png 1x, img/logo-footer@2x.png 2x" alt="логотип проекта Маса">
+      </a>
+      <p>Copyright someDesignCompany ©2019</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Фейсбук">
+            <svg class="social__svg footer__social-svg" focusable="false" width="24" height="24">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Твиттер">
+            <svg class="social__svg footer__social-svg" focusable="false" width="24" height="24">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="Инстаграм">
+            <svg class="social__svg footer__social-svg" focusable="false" width="24" height="24">
+              <use xlink:href="#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Модальные окна -->
+  <div class="modal-overlay modal-overlay--call modal-overlay--closed">
+    <div class="modal-call">
+      <h3>Заказать звонок</h3>
+      <p>Оставьте ваши контактные данные, мы&#160;свяжемся с&#160;вами в течение рабочего дня и обязательно поможем найти&#160;ответ на&#160;ваш вопрос! </p>
+      <form class="modal-call__form form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <div class="form__field form__field--text">
+          <input type="text" name="user-name" id="user-name" placeholder="имя" pattern="^[А-Яа-яЁё\s]+$" value="" minlength="2" maxlength="25" required="">
+          <label class="visually-hidden" for="user-name">Имя</label>
+        </div>
+        <div class="form__field form__field--text form__field--phone">
+          <input type="tel" name="user-phone" id="user-phone" placeholder="телефон" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
+          <label class="visually-hidden" for="user-phone">Номер телефона</label>
+        </div>
+        <button type="submit" id="order-call">перезвоните мне</button>
+        <div class="form__field form__field--checkbox">
+          <input type="checkbox" name="user-agree" id="user-agree" checked="" required="">
+          <label for="user-agree">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+        </div>
+      </form>
+      <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </div>
+  </div>
+
+  <div class="modal-overlay modal-overlay--call-accepted modal-overlay--closed">
+    <div class="modal-call modal-call--accepted">
+      <h3>Заявка принята</h3>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+      <button class="modal-call__btn-close modal-overlay__btn-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="modal-call__btn modal-call__btn--accepted modal-overlay__btn button" type="button">Понятно</button>
+    </div>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
